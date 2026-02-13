@@ -6,7 +6,7 @@ import styles from './Calendrier.module.css'
 
 const events = [
   { dateISO: '2026-02-01', endDateISO: '2026-02-28', dateDisplay: { line1: 'Février', line2: '2026' }, title: 'Porte-à-porte & ateliers de proximité', location: 'Sausset-les-Pins', time: null },
-  { dateISO: '2026-02-14', startTime: '10:30', endTime: '12:30', title: 'Rencontre avec les saussetoises et saussetois — Secteur Mare Nostrum', time: '10h30-12h30', location: 'Point de rencontre : à venir' },
+  { dateISO: '2026-02-14', startTime: '10:30', endTime: '12:30', title: 'Rencontre avec les saussetoises et saussetois — Secteur Mare Nostrum', time: '10h30-12h30', location: 'Déambulation dans le quartier' },
   { dateISO: '2026-02-21', startTime: '10:30', endTime: '12:30', title: 'Rencontre avec les saussetoises et saussetois — Secteur Centre Ville', time: '10h30-12h30', location: 'Point de rencontre : 10 avenue Adolphe Fouque' },
   { dateISO: '2026-02-23', startTime: '18:30', title: 'Réunion de concertation sur le programme', location: '10 avenue Adolphe Fouque (local de campagne)', time: '18h30' },
   { dateISO: '2026-02-26', startTime: '10:30', endTime: '12:30', title: 'Rencontre avec les saussetoises et saussetois — Secteur Aigue Bleue', time: '10h30-12h30', location: 'Point de rencontre : 4 rue Mozart' },

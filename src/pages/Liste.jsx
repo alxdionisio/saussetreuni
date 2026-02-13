@@ -58,7 +58,7 @@ export default function Liste() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, margin: '-30px' }}
                   transition={{ delay: Math.min(i * 0.04, 0.6), duration: 0.4 }}
-                  whileHover={{ scale: 1.05 }}
+                  whileHover={{ scale: 1.03, transition: { duration: 0.15, ease: 'easeOut' } }}
                 >
                   <div className={styles.avatar}>
                     <img src={c.image} alt={getImageAlt(c)} loading="lazy" />
