@@ -24,7 +24,7 @@ export default function Footer() {
           <div className={styles.brand}>
             <Link to="/" className={styles.logoLink} aria-label="Sausset Réuni 2026 - Accueil">
               <img
-                src="/logo_sausset%20reuni.png"
+                src={`${import.meta.env.BASE_URL || '/'}logo_sausset%20reuni.png`}
                 alt="Sausset Réuni 2026"
                 width="180"
                 height="48"

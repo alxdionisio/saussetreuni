@@ -28,7 +28,7 @@ export default function Liste() {
             <div className={styles.candidateBlock}>
               <div className={styles.candidatePhotoWrap}>
                 <img
-                  src="/maxime-marchand.png"
+                  src={`${import.meta.env.BASE_URL || '/'}maxime-marchand.png`}
                   alt="Maxime Marchand, candidat maire"
                   width={320}
                   height={400}

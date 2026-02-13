@@ -1,5 +1,5 @@
 /** Colistiers dans l'ordre de la liste (1 à 29). Position 9 non fournie. */
-const basePath = '/images/colistiers/'
+const basePath = (import.meta.env.BASE_URL || '/') + 'images/colistiers/'
 
 export const colistiers = [
   { order: 1, name: 'Marie-Laure Walther', image: basePath + '6ed8531d-f721-4e34-9d6d-884ce97782c6.jpg', id: '6ed8531d-f721-4e34-9d6d-884ce97782c6' },
