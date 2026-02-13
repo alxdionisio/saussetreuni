@@ -146,14 +146,14 @@ async function run() {
     'Partagez vos idées, vos préoccupations, vos attentes',
     'Permanence : 10 Av. Adolphe Fouque — 13960 Sausset-les-Pins',
     'Venez nous rencontrer aux horaires d\'ouverture.',
-    'Email : saussetreunis@gmail.com',
+    'Email : contact@saussetreuni.fr',
   ], { marginBottom: 16 })
 
   // ——— Mentions légales ———
   doc.fontSize(14).font('Helvetica-Bold').text('8. Mentions légales', { continued: false })
   doc.moveDown(0.5)
   doc.font('Helvetica').fontSize(10)
-  doc.text('Éditeur : Liste Sausset Réuni. Responsable de la publication : Maxime Marchand. Adresse : 10 avenue Adolphe Fouque — 13960 Sausset-les-Pins. Email : saussetreunis@gmail.com.', { lineGap: 4 })
+  doc.text('Éditeur : Liste Sausset Réuni. Responsable de la publication : Maxime Marchand. Adresse : 10 avenue Adolphe Fouque — 13960 Sausset-les-Pins. Email : contact@saussetreuni.fr.', { lineGap: 4 })
   doc.text('Hébergement : GitHub Pages (GitHub, Inc.). Nom de domaine géré par OVH. OVH SAS, 2 Rue Kellermann, 59100 Roubaix — Téléphone : 1007.', { lineGap: 4 })
   doc.text('Propriété intellectuelle : L\'ensemble des contenus du site est la propriété de la liste Sausset Réuni. Toute reproduction ou représentation, totale ou partielle, est interdite sans autorisation préalable.', { lineGap: 4 })
   doc.moveDown(12)
@@ -162,7 +162,7 @@ async function run() {
   doc.fontSize(14).font('Helvetica-Bold').text('9. Politique de confidentialité', { continued: false })
   doc.moveDown(0.5)
   doc.font('Helvetica').fontSize(10)
-  doc.text('Conformément au RGPD et à la loi Informatique et Libertés. Responsable du traitement : Maxime Marchand (saussetreunis@gmail.com). Données collectées : nom, prénom, email, message ; cookies techniques. Finalités : répondre aux demandes, informer sur la liste, fonctionnement du site. Base légale : consentement et intérêt légitime. Conservation : jusqu\'à la fin de la campagne puis suppression sous 12 mois. Droits : accès, rectification, opposition, effacement, limitation ; réclamation CNIL (www.cnil.fr).', { lineGap: 3 })
+  doc.text('Conformément au RGPD et à la loi Informatique et Libertés. Responsable du traitement : Maxime Marchand (contact@saussetreuni.fr). Données collectées : nom, prénom, email, message ; cookies techniques. Finalités : répondre aux demandes, informer sur la liste, fonctionnement du site. Base légale : consentement et intérêt légitime. Conservation : jusqu\'à la fin de la campagne puis suppression sous 12 mois. Droits : accès, rectification, opposition, effacement, limitation ; réclamation CNIL (www.cnil.fr).', { lineGap: 3 })
   doc.moveDown(12)
 
   // ——— Footer ———

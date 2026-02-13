@@ -1,3 +1,6 @@
+/** Base path du site (ex: /saussetreuni ou '' pour domaine à la racine). Utiliser pour les ancres et liens absolus. */
+export const BASE_PATH = (import.meta.env.BASE_URL || '/').replace(/\/$/, '') || ''
+
 /**
  * URL canonique du site (sans slash final).
  * En production, définir VITE_SITE_URL dans .env (ex: https://sausset-reuni.fr).

@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import { motion, AnimatePresence } from 'framer-motion'
+import { BASE_PATH } from '../lib/siteConfig'
 import styles from './Navbar.module.css'
 
 const HEADER_OFFSET = 90
@@ -97,7 +98,7 @@ export default function Navbar() {
               l.hash ? (
                 <a
                   key={l.href + (l.hash || '')}
-                  href={l.href + (l.hash || '')}
+                  href={BASE_PATH + l.href + (l.hash || '')}
                   className={styles.navLink}
                   onClick={(e) => handleHashClick(e, l.hash)}
                 >
@@ -154,7 +155,7 @@ export default function Navbar() {
                 >
                   {l.hash ? (
                     <a
-                      href={l.href + l.hash}
+                      href={BASE_PATH + l.href + l.hash}
                       className={styles.mobileLink}
                       onClick={(e) => handleHashClick(e, l.hash)}
                     >

@@ -50,6 +50,8 @@ Pour que le sitemap et les métadonnées SEO utilisent la bonne URL en productio
 
 Si tu ne la définis pas, le build utilise par défaut `https://sausset-reuni.fr`.
 
+**Base path (domaine personnalisé à la racine)** : si le site est servi à la racine (ex. `https://sausset-reuni.fr`), ajoute une variable **`VITE_BASE_URL`** avec la valeur **`/`** pour que les images et les liens (y compris ancres `/#section`) fonctionnent. Sans cette variable, le build utilise `/saussetreuni/` (adapté à GitHub Pages en sous-chemin).
+
 ### 3. Domaine personnalisé (optionnel)
 
 Si tu utilises un nom de domaine (ex. sausset-reuni.fr) :

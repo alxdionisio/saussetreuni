@@ -54,9 +54,9 @@ export default function Footer() {
               </a>
             </div>
             <div className={styles.legal}>
-              <a href="/mentions-legales">Mentions légales</a>
+              <Link to="/mentions-legales">Mentions légales</Link>
               <span className={styles.sep}>|</span>
-              <a href="/politique-confidentialite">Politique de confidentialité</a>
+              <Link to="/politique-confidentialite">Politique de confidentialité</Link>
             </div>
             <p className={styles.copyright}>
               Site de campagne électorale — Élections municipales<br/>© Sausset Réuni 2026 — Tous droits réservés.

@@ -28,8 +28,8 @@ export default function MentionsLegales() {
             </p>
             <p className={styles.paragraph}>
               <strong>Adresse électronique :</strong>{' '}
-              <a href="mailto:saussetreunis@gmail.com" className={styles.link}>
-                saussetreunis@gmail.com
+              <a href="mailto:contact@saussetreuni.fr" className={styles.link}>
+                contact@saussetreuni.fr
               </a>
             </p>
             <p className={styles.paragraph}>

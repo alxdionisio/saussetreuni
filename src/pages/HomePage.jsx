@@ -11,10 +11,13 @@ export default function HomePage() {
   const location = useLocation()
 
   useEffect(() => {
-    if (location.hash) {
+    if (!location.hash) return
+    const scrollToHash = () => {
       const el = document.querySelector(location.hash)
       el?.scrollIntoView({ behavior: 'smooth', block: 'start' })
     }
+    const t = requestAnimationFrame(() => requestAnimationFrame(scrollToHash))
+    return () => cancelAnimationFrame(t)
   }, [location.pathname, location.hash])
 
   return (

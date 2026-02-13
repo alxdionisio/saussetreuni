@@ -29,8 +29,8 @@ export default function PolitiqueConfidentialite() {
             </p>
             <p className={styles.paragraph}>
               Contact :{' '}
-              <a href="mailto:saussetreunis@gmail.com" className={styles.link}>
-                saussetreunis@gmail.com
+              <a href="mailto:contact@saussetreuni.fr" className={styles.link}>
+                contact@saussetreuni.fr
               </a>
             </p>
           </section>
@@ -88,7 +88,7 @@ export default function PolitiqueConfidentialite() {
             </p>
             <ul className={styles.list}>
               <li>Vous pouvez vous désinscrire à tout moment en nous contactant à{' '}
-                <a href="mailto:saussetreunis@gmail.com" className={styles.link}>saussetreunis@gmail.com</a>
+                <a href="mailto:contact@saussetreuni.fr" className={styles.link}>contact@saussetreuni.fr</a>
                 {' '}ou en suivant le lien de désinscription présent dans chaque envoi (newsletter) ou en quittant le groupe WhatsApp.
               </li>
               <li>La politique de confidentialité est portée à votre connaissance au moment de la collecte (lien affiché à côté de la case à cocher d'inscription à la newsletter/WhatsApp).</li>
@@ -142,8 +142,8 @@ export default function PolitiqueConfidentialite() {
             </ul>
             <p className={styles.paragraph}>
               Pour exercer ces droits, adressez une demande à :{' '}
-              <a href="mailto:saussetreunis@gmail.com" className={styles.link}>
-                saussetreunis@gmail.com
+              <a href="mailto:contact@saussetreuni.fr" className={styles.link}>
+                contact@saussetreuni.fr
               </a>
               . Nous y répondrons dans les délais prévus par la réglementation.
             </p>
