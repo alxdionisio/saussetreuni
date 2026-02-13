@@ -32,9 +32,7 @@ export default function App() {
           <Route path="/liste" element={<Liste />} />
           <Route path="/contact" element={<ContactPage />} />
           <Route path="/mentions-legales" element={<MentionsLegales />} />
-          <Route path="/mentions-legales/" element={<Navigate to="/mentions-legales" replace />} />
           <Route path="/politique-confidentialite" element={<PolitiqueConfidentialite />} />
-          <Route path="/politique-confidentialite/" element={<Navigate to="/politique-confidentialite" replace />} />
           <Route path="*" element={<NotFoundPage />} />
         </Routes>
       </main>
