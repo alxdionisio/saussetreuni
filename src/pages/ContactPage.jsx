@@ -76,7 +76,7 @@ export default function ContactPage() {
           <FadeIn direction="left" className={styles.info}>
             <div className={styles.infoCard}>
               <h3 className={styles.infoTitle}>Permanence de campagne</h3>
-              <p className={styles.infoText}>10 Av. Adolphe Fouque (local de campagne)</p>
+              <p className={styles.infoText}>10 Av. Adolphe Fouque</p>
               <p className={styles.infoSub}>13960 Sausset-les-Pins</p>
               <p className={styles.infoMuted}>
                 Venez nous rencontrer aux horaires d'ouverture pour échanger avec l'équipe et les membres de la liste.
