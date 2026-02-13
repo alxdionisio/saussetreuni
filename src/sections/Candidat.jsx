@@ -48,7 +48,7 @@ export default function Candidat() {
 
           <FadeIn delay={0.45}>
             <p className={styles.bio}>
-              Maxime Marchand est passionné par son village. Il souhaite, avec sa liste Sausset Réuni, pouvoir poursuivre ses engagements auprès des Saussetoises et des Saussetoises.
+              Maxime Marchand est passionné par son village. Il souhaite, avec sa liste Sausset Réuni, pouvoir poursuivre ses engagements auprès des Saussetois.
             </p>
           </FadeIn>
 
