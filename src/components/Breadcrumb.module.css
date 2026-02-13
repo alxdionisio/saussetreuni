@@ -1,0 +1,76 @@
+.breadcrumb {
+  padding: 0.75rem 0 1.25rem;
+  border-bottom: 1px solid var(--gray-200);
+  background: var(--white);
+}
+
+/* Fil d'ariane sur la hero : centré, sans bordure, fond transparent */
+.breadcrumb.hero {
+  border-bottom: none;
+  background: transparent;
+  padding: 0.5rem 0 1.75rem;
+}
+
+.breadcrumb.hero.light .link {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.breadcrumb.hero.light .link:hover {
+  color: var(--white);
+}
+
+.breadcrumb.hero.light .sep {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.breadcrumb.hero.light .current {
+  color: rgba(255, 255, 255, 0.95);
+}
+
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.35rem 0.5rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: 0.9rem;
+}
+
+.listCentered {
+  justify-content: center;
+}
+
+.item {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+/* Espace avant la page courante pour ne pas coller au séparateur › */
+.item:last-child {
+  margin-left: 0.15rem;
+}
+
+.link {
+  color: var(--color-primary);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.link:hover {
+  color: var(--color-dark);
+  text-decoration: underline;
+}
+
+.sep {
+  color: var(--gray-400);
+  user-select: none;
+  margin-left: 0.25rem;
+}
+
+.current {
+  color: var(--gray-600);
+  font-weight: 500;
+}

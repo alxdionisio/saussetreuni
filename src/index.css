@@ -1,0 +1,129 @@
+/* ===== RESET & GLOBAL ===== */
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* Palette — Campagne Sausset Réuni 2026 */
+  --color-dark: #063c47;
+  --color-primary: #318a93;
+  --color-primary-light: #4a9ea6;
+  --color-primary-muted: rgba(49, 138, 147, 0.15);
+  --teal: var(--color-primary);
+  --teal-dark: var(--color-dark);
+  --teal-light: var(--color-primary-light);
+  --teal-muted: var(--color-primary-muted);
+  --blue-deep: #063c47;
+  --blue-navy: #0a4d56;
+  --blue-ocean: var(--color-primary);
+  --blue-sky: var(--color-primary-light);
+  --blue-light: #7eb5bb;
+  --gold: var(--color-primary);
+  --gold-light: var(--color-primary-light);
+  --sand: #f6f9fa;
+  --sand-light: #eef3f5;
+  --white: #ffffff;
+  --gray-100: #f3f4f6;
+  --gray-200: #e5e7eb;
+  --gray-400: #9ca3af;
+  --gray-600: #4b5563;
+  --gray-800: #1f2937;
+  --color-error: #b91c1c;
+
+  /* Typography */
+  --font-display: 'Playfair Display', Georgia, serif;
+  --font-heading: 'Montserrat', sans-serif;
+  --font-body: 'Source Sans 3', 'Segoe UI', sans-serif;
+
+  /* Spacing */
+  --section-padding: clamp(4rem, 8vw, 8rem);
+  --container-max: 1200px;
+  --container-padding: clamp(1.25rem, 4vw, 3rem);
+
+  /* Transitions */
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: var(--font-body);
+  font-weight: 400;
+  line-height: 1.7;
+  color: var(--gray-800);
+  background: var(--white);
+  overflow-x: hidden;
+}
+
+h1,
+h2 {
+  font-family: var(--font-heading) !important;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+/* ===== UTILITY ===== */
+.container {
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 0 var(--container-padding);
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  border: 0;
+}
+
+/* ===== SCROLLBAR ===== */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--sand-light);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-primary);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-dark);
+}
+
+/* ===== SELECTION ===== */
+::selection {
+  background: var(--color-primary);
+  color: var(--white);
+}

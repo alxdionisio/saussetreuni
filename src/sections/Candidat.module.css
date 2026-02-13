@@ -1,0 +1,151 @@
+.section {
+  padding: var(--section-padding) 0;
+  background: var(--sand-light);
+  position: relative;
+  overflow: hidden;
+}
+
+.bgPattern {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50%;
+  height: 100%;
+  background:
+    repeating-linear-gradient(
+      45deg,
+      transparent,
+      transparent 40px,
+      rgba(212, 168, 67, 0.03) 40px,
+      rgba(212, 168, 67, 0.03) 41px
+    );
+  pointer-events: none;
+}
+
+.inner {
+  display: grid;
+  grid-template-columns: 1fr 1.3fr;
+  gap: clamp(2rem, 5vw, 5rem);
+  align-items: center;
+  position: relative;
+}
+
+/* Image column */
+.imageCol {
+  display: flex;
+  justify-content: center;
+}
+
+.imageWrapper {
+  position: relative;
+  width: 100%;
+  max-width: 380px;
+}
+
+.portrait {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  border-radius: 20px;
+  display: block;
+  position: relative;
+  z-index: 1;
+}
+
+.imageDecor {
+  position: absolute;
+  bottom: -12px;
+  right: -12px;
+  width: 100%;
+  height: 100%;
+  border: 2px solid var(--color-primary);
+  border-radius: 20px;
+  z-index: 0;
+}
+
+/* Text column */
+.textCol {
+  text-align: left;
+}
+
+.textCol h2 {
+  text-align: left;
+}
+
+.tagline {
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: var(--color-primary);
+  margin-bottom: 1.25rem;
+  letter-spacing: 0.01em;
+}
+
+.quote {
+  font-family: var(--font-display);
+  font-size: clamp(1.1rem, 1.8vw, 1.35rem);
+  font-style: italic;
+  font-weight: 600;
+  color: var(--gray-800);
+  border-left: 3px solid var(--color-primary);
+  padding-left: 1.25rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.5;
+}
+
+.bio {
+  font-size: 1rem;
+  color: var(--gray-600);
+  line-height: 1.75;
+  margin-bottom: 1rem;
+}
+
+.milestones {
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.milestone {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  padding: 1rem 1.25rem;
+  background: var(--white);
+  border-radius: 12px;
+  border: 1px solid var(--gray-200);
+  font-size: 0.88rem;
+  color: var(--gray-600);
+  flex: 1;
+  min-width: 140px;
+}
+
+.milestoneYear {
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--color-primary);
+}
+
+@media (max-width: 768px) {
+  .inner {
+    grid-template-columns: 1fr;
+  }
+  .imageWrapper {
+    max-width: 280px;
+  }
+  .textCol {
+    text-align: center;
+  }
+  .textCol h2 {
+    text-align: center;
+  }
+  .quote {
+    border-left: none;
+    padding-left: 0;
+    text-align: center;
+    border-top: 2px solid var(--color-primary);
+    border-bottom: 2px solid var(--color-primary);
+    padding: 1rem 0;
+  }
+}

@@ -1,0 +1,176 @@
+.footer {
+  padding: clamp(1.5rem, 3vw, 2.5rem) var(--container-padding) 0;
+  color: rgba(255, 255, 255, 0.9);
+  /* background défini en JS selon la section qui précède (couleur homogène) */
+}
+
+.footerBlock {
+  background: var(--color-primary);
+  border-radius: 24px 24px 0 0;
+  padding: clamp(2.5rem, 5vw, 4rem) 0 2rem;
+  box-shadow: 0 -4px 24px rgba(6, 60, 71, 0.15);
+}
+
+/* Page Comité de soutien : bloc en blanc pour se détacher du formulaire vert */
+.footerBlockLight {
+  background: var(--white);
+  box-shadow: 0 -4px 24px rgba(6, 60, 71, 0.08);
+}
+
+.footerBlockLight .brandName {
+  color: var(--gray-800);
+}
+
+.footerBlockLight .brandSub {
+  color: var(--gray-600);
+}
+
+.footerBlockLight .address {
+  color: var(--gray-600);
+}
+
+.footerBlockLight .social a {
+  background: var(--gray-200);
+  color: var(--color-primary);
+}
+
+.footerBlockLight .social a:hover {
+  background: var(--color-primary-muted, rgba(49, 138, 147, 0.2));
+  color: var(--color-dark);
+}
+
+.footerBlockLight .legal a {
+  color: var(--gray-600);
+}
+
+.footerBlockLight .legal a:hover {
+  color: var(--color-dark);
+}
+
+.footerBlockLight .sep {
+  color: var(--gray-400);
+}
+
+.footerBlockLight .copyright {
+  color: var(--gray-600);
+}
+
+.inner {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 2.5rem;
+  align-items: start;
+}
+
+.brand {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.logoLink {
+  display: flex;
+  flex-shrink: 0;
+  transition: opacity 0.2s;
+}
+
+.logoLink:hover {
+  opacity: 0.9;
+}
+
+.logoImg {
+  width: 48px;
+  height: auto;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.brandName {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: var(--white);
+  margin-bottom: 0.35rem;
+}
+
+.brandSub {
+  font-size: 0.88rem;
+  color: rgba(255, 255, 255, 0.85);
+  line-height: 1.5;
+  margin-bottom: 0.5rem;
+}
+
+.address {
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.right {
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 1rem;
+}
+
+.social {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.social a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.15);
+  color: var(--white);
+  transition: background 0.25s, transform 0.2s;
+}
+
+.social a:hover {
+  background: rgba(255, 255, 255, 0.25);
+  transform: scale(1.05);
+}
+
+.legal {
+  font-size: 0.88rem;
+}
+
+.legal a {
+  color: rgba(255, 255, 255, 0.9);
+  transition: color 0.2s;
+}
+
+.legal a:hover {
+  color: var(--white);
+}
+
+.sep {
+  margin: 0 0.5rem;
+  opacity: 0.6;
+}
+
+.copyright {
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.7);
+  max-width: 320px;
+}
+
+@media (max-width: 768px) {
+  .inner {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  .brand {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .right {
+    align-items: center;
+    text-align: center;
+  }
+}

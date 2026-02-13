@@ -1,0 +1,9 @@
+.page {
+  padding-top: 6rem;
+  padding-bottom: 0;
+}
+
+.page > section:first-child {
+  padding-top: clamp(2rem, 4vw, 3rem);
+}
+

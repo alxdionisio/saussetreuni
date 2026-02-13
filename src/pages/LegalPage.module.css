@@ -1,0 +1,179 @@
+/* Structure commune aux pages Mentions légales et Politique de confidentialité */
+
+.page {
+  padding-top: 6rem;
+  padding-bottom: var(--section-padding);
+  background: var(--sand-light);
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 var(--container-padding);
+}
+
+.header {
+  margin-bottom: clamp(2rem, 4vw, 2.5rem);
+}
+
+.label {
+  display: block;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-primary);
+  margin-bottom: 0.5rem;
+}
+
+.title {
+  font-family: var(--font-display);
+  font-size: clamp(1.75rem, 3vw, 2.25rem);
+  font-weight: 700;
+  color: var(--gray-800);
+  line-height: 1.25;
+}
+
+.content {
+  background: var(--white);
+  border-radius: 20px;
+  padding: clamp(2rem, 4vw, 3rem);
+  border: 1px solid var(--gray-200);
+  box-shadow: 0 4px 24px rgba(6, 60, 71, 0.06);
+}
+
+.section {
+  margin-bottom: clamp(1.75rem, 3vw, 2.25rem);
+}
+
+.section:last-of-type {
+  margin-bottom: 0;
+}
+
+.sectionTitle {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--gray-800);
+  margin-bottom: 0.75rem;
+  padding-bottom: 0.35rem;
+  border-bottom: 2px solid var(--color-primary);
+  display: inline-block;
+}
+
+.paragraph {
+  font-size: 1rem;
+  color: var(--gray-600);
+  line-height: 1.75;
+  margin-bottom: 0.75rem;
+}
+
+.paragraph:last-child {
+  margin-bottom: 0;
+}
+
+.muted {
+  color: var(--gray-500);
+  font-size: 0.95rem;
+}
+
+.brand {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: var(--color-primary);
+  margin-bottom: 0.75rem;
+}
+
+.link {
+  color: var(--color-primary);
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.link:hover {
+  color: var(--color-dark);
+}
+
+.intro {
+  font-size: 1rem;
+  color: var(--gray-600);
+  line-height: 1.75;
+  margin-bottom: clamp(1.75rem, 3vw, 2.25rem);
+}
+
+.list {
+  margin: 0.5rem 0 1rem 1.25rem;
+  padding: 0;
+  font-size: 1rem;
+  color: var(--gray-600);
+  line-height: 1.75;
+}
+
+.list li {
+  margin-bottom: 0.4rem;
+}
+
+/* Encadré réclamation CNIL */
+.cnilBox {
+  margin-top: 1.25rem;
+  padding: 1.25rem 1.5rem;
+  background: var(--sand-light);
+  border: 1px solid var(--gray-200);
+  border-radius: 12px;
+}
+
+.cnilBoxTitle {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--gray-800);
+  margin: 0 0 0.5rem 0;
+}
+
+.cnilBox .paragraph {
+  margin-bottom: 0;
+}
+
+.cnilBox .paragraph:last-child {
+  margin-bottom: 0;
+}
+
+/* Bouton retour à l'accueil */
+.backWrap {
+  margin-top: clamp(2.5rem, 4vw, 3rem);
+  padding-top: clamp(1.5rem, 3vw, 2rem);
+  border-top: 1px solid var(--gray-200);
+  text-align: center;
+}
+
+.backButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.85rem 1.75rem;
+  background: var(--color-primary);
+  color: var(--white);
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 12px;
+  border: none;
+  text-decoration: none;
+  transition: background 0.25s var(--ease-out), transform 0.2s var(--ease-out);
+  cursor: pointer;
+}
+
+.backButton:hover {
+  background: var(--color-dark);
+  transform: translateY(-1px);
+}
+
+.backButton:focus-visible {
+  outline: 2px solid var(--color-dark);
+  outline-offset: 2px;
+}
+
+.backButton svg {
+  flex-shrink: 0;
+}

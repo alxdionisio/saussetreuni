@@ -1,0 +1,3 @@
+# Fallback SPA : toutes les requêtes vers index.html (status 200)
+# pour que React Router gère les routes et affiche la 404 personnalisée si besoin
+/*    /index.html   200

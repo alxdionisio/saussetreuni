@@ -1,0 +1,230 @@
+.page {
+  min-height: 100vh;
+  padding-bottom: 0;
+}
+
+.hero {
+  padding: 6rem 0 clamp(1.5rem, 3vw, 2rem);
+  background: var(--color-dark);
+  position: relative;
+  overflow: hidden;
+}
+
+.hero .container > * {
+  margin-bottom: 0 !important;
+}
+
+.hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 20% 80%, rgba(49, 138, 147, 0.12) 0%, transparent 45%),
+    radial-gradient(circle at 80% 20%, rgba(255, 255, 255, 0.03) 0%, transparent 40%);
+  pointer-events: none;
+}
+
+.hero .container {
+  position: relative;
+  z-index: 1;
+}
+
+.content {
+  background: var(--sand-light);
+  padding: clamp(2.5rem, 5vw, 4rem) 0 var(--section-padding);
+}
+
+/* Bloc candidat maire — mis en avant par la taille */
+.candidateBlock {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: 3.5rem;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.candidatePhotoWrap {
+  flex-shrink: 0;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 4px solid var(--white);
+  box-shadow: 0 12px 40px rgba(6, 60, 71, 0.18);
+  background: var(--gray-200);
+}
+
+.candidatePhoto {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 35%;
+}
+
+.candidateMessage {
+  text-align: center;
+}
+
+.candidateQuote {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: var(--gray-700);
+  margin: 0 0 1.25rem;
+  font-style: normal;
+  quotes: "«" "»" "‹" "›";
+}
+
+.candidateQuote::before {
+  content: open-quote;
+}
+
+.candidateQuote::after {
+  content: close-quote;
+}
+
+.candidateSignature {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--color-dark);
+  font-style: italic;
+  margin: 0;
+  letter-spacing: 0.02em;
+  text-align: center;
+}
+
+@media (min-width: 640px) {
+  .candidatePhotoWrap {
+    width: 260px;
+    height: 260px;
+  }
+}
+
+@media (min-width: 900px) {
+  .candidateBlock {
+    flex-direction: row;
+    align-items: center;
+    gap: 2.5rem;
+    max-width: 900px;
+    text-align: left;
+  }
+
+  .candidatePhotoWrap {
+    width: 280px;
+    height: 280px;
+  }
+
+  .candidateMessage {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+    min-height: 280px;
+  }
+
+  .candidateQuote {
+    font-size: 1.15rem;
+    text-align: justify;
+  }
+
+  .candidateSignature {
+    text-align: right;
+  }
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: clamp(1.25rem, 3vw, 2rem);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.card {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.avatar {
+  width: 100%;
+  aspect-ratio: 1;
+  max-width: 180px;
+  margin: 0 auto;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 3px solid var(--white);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+  background: var(--gray-200);
+  transition: box-shadow 0.3s;
+}
+
+.card:hover .avatar {
+  box-shadow: 0 12px 40px rgba(6, 60, 71, 0.2);
+}
+
+.avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.name {
+  margin-top: 0.75rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--gray-800);
+}
+
+@media (min-width: 640px) {
+  .grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (min-width: 900px) {
+  .grid {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+
+@media (min-width: 1100px) {
+  .grid {
+    grid-template-columns: repeat(6, 1fr);
+  }
+}
+
+.internalLinks {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-top: 2rem;
+  margin-bottom: 0;
+}
+
+.internalLinkBtn {
+  display: inline-block;
+  padding: 0.6rem 1.25rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--white);
+  background: var(--color-primary);
+  border: none;
+  border-radius: 10px;
+  text-decoration: none;
+  transition: background 0.2s, transform 0.15s;
+}
+
+.internalLinkBtn:hover {
+  background: var(--color-dark);
+  color: var(--white);
+  text-decoration: none;
+  transform: translateY(-2px);
+}
