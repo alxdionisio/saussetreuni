@@ -41,6 +41,8 @@ jobs:
           VITE_SITE_URL: ${{ vars.VITE_SITE_URL }}
           # Base path : laisser vide pour GitHub Pages (/saussetreuni/) ; mettre / pour domaine à la racine
           VITE_BASE_URL: ${{ vars.VITE_BASE_URL }}
+          # Google Analytics 4 (optionnel) — ID de mesure G-XXXXXXXXXX
+          VITE_GA4_MEASUREMENT_ID: ${{ vars.VITE_GA4_MEASUREMENT_ID }}
 
       - name: Copy index.html to 404.html (SPA routing on GitHub Pages)
         run: cp dist/index.html dist/404.html

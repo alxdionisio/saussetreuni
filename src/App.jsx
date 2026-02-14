@@ -1,11 +1,12 @@
 import React from 'react'
-import { Routes, Route, Navigate } from 'react-router-dom'
+import { Routes, Route } from 'react-router-dom'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 import ScrollToTop from './components/ScrollToTop'
 import Seo from './components/Seo'
 import StructuredData from './components/StructuredData'
 import CookieBanner from './components/CookieBanner'
+import GA4PageView from './components/GA4PageView'
 import HomePage from './pages/HomePage'
 import ProgrammePage from './pages/ProgrammePage'
 import ComiteSoutien from './pages/ComiteSoutien'
@@ -22,6 +23,7 @@ export default function App() {
       <Seo />
       <StructuredData />
       <ScrollToTop />
+      <GA4PageView />
       <Navbar />
       <main>
         <Routes>
