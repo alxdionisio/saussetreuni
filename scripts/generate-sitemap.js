@@ -1,6 +1,6 @@
 /**
  * Génère sitemap.xml et robots.txt dans public/ avec l'URL du site.
- * Utilise VITE_SITE_URL (ex: https://sausset-reuni.fr) ou valeur par défaut.
+ * Utilise VITE_SITE_URL (ex: https://saussetreuni.fr) ou valeur par défaut.
  * À lancer avant le build : npm run prebuild ou npm run build
  */
 import { writeFileSync } from 'fs'
@@ -11,7 +11,7 @@ const __dirname = dirname(fileURLToPath(import.meta.url))
 const root = join(__dirname, '..')
 const publicDir = join(root, 'public')
 
-const baseUrl = (process.env.VITE_SITE_URL || 'https://sausset-reuni.fr').replace(/\/$/, '')
+const baseUrl = (process.env.VITE_SITE_URL || 'https://saussetreuni.fr').replace(/\/$/, '')
 
 const paths = [
   '',
