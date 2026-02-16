@@ -25,6 +25,7 @@ export default function ProgrammePreview() {
       <div className="container">
         <SectionTitle
           label="Notre programme"
+          title="Un projet pour chaque Saussetois"
           subtitle="Notre liste et notre candidat portent un projet municipal construit avec les habitants. Découvrez les grandes orientations pour le prochain mandat."
         />
 

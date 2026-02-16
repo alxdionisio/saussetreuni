@@ -61,7 +61,14 @@ export default function Liste() {
                   whileHover={{ scale: 1.03, transition: { duration: 0.15, ease: 'easeOut' } }}
                 >
                   <div className={styles.avatar}>
-                    <img src={c.image} alt={getImageAlt(c)} loading="lazy" />
+                    <img
+                      src={c.image}
+                      alt={getImageAlt(c)}
+                      loading="lazy"
+                      width={180}
+                      height={180}
+                      sizes="(max-width: 640px) 120px, (max-width: 900px) 150px, 180px"
+                    />
                   </div>
                   <figcaption className={styles.name}>{getDisplayName(c)}</figcaption>
                 </motion.figure>

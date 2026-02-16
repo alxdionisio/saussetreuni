@@ -1,0 +1,35 @@
+# En-têtes de cache pour améliorer les performances (compatible Netlify / Cloudflare Pages).
+# GitHub Pages ne permet pas d’en définir ; si vous utilisez un CDN devant le site, ces règles s’appliquent.
+
+/assets/*
+  Cache-Control: public, max-age=31536000, immutable
+
+/images/*
+  Cache-Control: public, max-age=31536000, immutable
+
+/*.png
+  Cache-Control: public, max-age=31536000
+
+/*.jpg
+  Cache-Control: public, max-age=31536000
+
+/*.jpeg
+  Cache-Control: public, max-age=31536000
+
+/*.webp
+  Cache-Control: public, max-age=31536000
+
+/*.js
+  Cache-Control: public, max-age=31536000, immutable
+
+/*.css
+  Cache-Control: public, max-age=31536000, immutable
+
+/maxime-marchand.png
+  Cache-Control: public, max-age=31536000
+
+/logo_sausset%20reuni.png
+  Cache-Control: public, max-age=31536000
+
+/Sausset%20Reuni_equipe.png
+  Cache-Control: public, max-age=31536000

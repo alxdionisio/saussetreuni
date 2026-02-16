@@ -27,7 +27,7 @@ export default function FadeIn({
     <motion.div
       ref={ref}
       className={className}
-      style={style}
+      style={{ ...style, willChange: inView ? 'auto' : 'transform' }}
       initial={{ opacity: 0, x, y }}
       animate={inView ? { opacity: 1, x: 0, y: 0 } : { opacity: 0, x, y }}
       transition={{

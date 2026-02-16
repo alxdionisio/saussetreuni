@@ -12,7 +12,7 @@
 .heroBg {
   position: absolute;
   inset: 0;
-  background-image: url("../Sausset%20Reuni_equipe.png");
+  background-image: url("/Sausset%20Reuni_equipe.png");
   background-size: cover;
   background-position: center;
   z-index: 0;

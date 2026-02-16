@@ -5,7 +5,9 @@ export default function SectionTitle({ label, title, subtitle, intro, light = fa
   return (
     <div className={`${styles.wrapper} ${light ? styles.light : ''}`}>
       {label && <span className={styles.label}>{label}</span>}
-      <TitleTag className={styles.title}>{title}</TitleTag>
+      {title != null && title !== '' && (
+        <TitleTag className={styles.title}>{title}</TitleTag>
+      )}
       {subtitle && <p className={styles.subtitle}>{subtitle}</p>}
       {intro && <p className={styles.intro}>{intro}</p>}
     </div>
