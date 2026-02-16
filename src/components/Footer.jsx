@@ -23,13 +23,16 @@ export default function Footer() {
         <div className={`container ${styles.inner}`}>
           <div className={styles.brand}>
             <Link to="/" className={styles.logoLink} aria-label="Sausset Réuni 2026 - Accueil">
-              <img
-                src={`${import.meta.env.BASE_URL || '/'}logo_sausset%20reuni.png`}
-                alt="Sausset Réuni 2026"
-                width="180"
-                height="48"
-                className={styles.logoImg}
-              />
+              <picture>
+                <source type="image/webp" srcSet={`${import.meta.env.BASE_URL || '/'}logo_sausset%20reuni.webp`} />
+                <img
+                  src={`${import.meta.env.BASE_URL || '/'}logo_sausset%20reuni.png`}
+                  alt="Sausset Réuni 2026"
+                  width="180"
+                  height="48"
+                  className={styles.logoImg}
+                />
+              </picture>
             </Link>
             <div>
               <p className={styles.brandName}>Sausset Réuni 2026</p>

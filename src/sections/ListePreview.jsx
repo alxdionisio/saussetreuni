@@ -5,6 +5,7 @@ import FadeIn from '../components/FadeIn'
 import SectionTitle from '../components/SectionTitle'
 import { useCookieConsent } from '../contexts/CookieConsentContext'
 import { colistiers, getDisplayName, getImageAlt } from '../data/colistiers'
+import { getImageWebpUrl } from '../lib/imageUtils'
 import styles from './ListePreview.module.css'
 
 export default function ListePreview() {
@@ -53,7 +54,10 @@ export default function ListePreview() {
                     transition={{ delay: i * 0.03, duration: 0.35 }}
                   >
                     <div className={styles.avatar}>
-                      <img src={c.image} alt={getImageAlt(c)} loading="lazy" />
+                      <picture>
+                        <source type="image/webp" srcSet={getImageWebpUrl(c.image)} />
+                        <img src={c.image} alt={getImageAlt(c)} loading="lazy" />
+                      </picture>
                     </div>
                     <div className={styles.hoverOverlay}>
                       <span className={styles.hoverName}>{getDisplayName(c)}</span>

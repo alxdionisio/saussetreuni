@@ -9,14 +9,17 @@ export default function Candidat() {
       <div className={`container ${styles.inner}`}>
         <FadeIn direction="left" className={styles.imageCol}>
           <div className={styles.imageWrapper}>
-            <img
-              src={`${import.meta.env.BASE_URL || '/'}maxime-marchand.png`}
-              alt="Maxime Marchand, maire de Sausset-les-Pins et candidat aux élections municipales 2026"
-              width="400"
-              height="500"
-              loading="lazy"
-              className={styles.portrait}
-            />
+            <picture>
+              <source type="image/webp" srcSet={`${import.meta.env.BASE_URL || '/'}maxime-marchand.webp`} />
+              <img
+                src={`${import.meta.env.BASE_URL || '/'}maxime-marchand.png`}
+                alt="Maxime Marchand, maire de Sausset-les-Pins et candidat aux élections municipales 2026"
+                width="400"
+                height="500"
+                loading="lazy"
+                className={styles.portrait}
+              />
+            </picture>
             <div className={styles.imageDecor} />
           </div>
         </FadeIn>

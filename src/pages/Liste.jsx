@@ -4,7 +4,12 @@ import FadeIn from '../components/FadeIn'
 import SectionTitle from '../components/SectionTitle'
 import Breadcrumb from '../components/Breadcrumb'
 import { colistiers, getDisplayName, getImageAlt } from '../data/colistiers'
+import { getImageWebpUrl } from '../lib/imageUtils'
 import styles from './Liste.module.css'
+
+const base = import.meta.env.BASE_URL || '/'
+const portraitWebp = `${base}maxime-marchand.webp`
+const portraitFallback = `${base}maxime-marchand.png`
 
 export default function Liste() {
   return (
@@ -27,14 +32,17 @@ export default function Liste() {
           <FadeIn>
             <div className={styles.candidateBlock}>
               <div className={styles.candidatePhotoWrap}>
-                <img
-                  src={`${import.meta.env.BASE_URL || '/'}maxime-marchand.png`}
-                  alt="Maxime Marchand, candidat maire"
-                  width={320}
-                  height={400}
-                  loading="eager"
-                  className={styles.candidatePhoto}
-                />
+                <picture>
+                  <source type="image/webp" srcSet={portraitWebp} />
+                  <img
+                    src={portraitFallback}
+                    alt="Maxime Marchand, candidat maire"
+                    width={320}
+                    height={400}
+                    loading="eager"
+                    className={styles.candidatePhoto}
+                  />
+                </picture>
               </div>
               <div className={styles.candidateMessage}>
                 <blockquote className={styles.candidateQuote}>
@@ -61,14 +69,17 @@ export default function Liste() {
                   whileHover={{ scale: 1.03, transition: { duration: 0.15, ease: 'easeOut' } }}
                 >
                   <div className={styles.avatar}>
-                    <img
-                      src={c.image}
-                      alt={getImageAlt(c)}
-                      loading="lazy"
-                      width={180}
-                      height={180}
-                      sizes="(max-width: 640px) 120px, (max-width: 900px) 150px, 180px"
-                    />
+                    <picture>
+                      <source type="image/webp" srcSet={getImageWebpUrl(c.image)} />
+                      <img
+                        src={c.image}
+                        alt={getImageAlt(c)}
+                        loading="lazy"
+                        width={180}
+                        height={180}
+                        sizes="(max-width: 640px) 120px, (max-width: 900px) 150px, 180px"
+                      />
+                    </picture>
                   </div>
                   <figcaption className={styles.name}>{getDisplayName(c)}</figcaption>
                 </motion.figure>
