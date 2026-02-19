@@ -3,12 +3,12 @@ export const BASE_PATH = (import.meta.env.BASE_URL || '/').replace(/\/$/, '') ||
 
 /**
  * URL canonique du site (sans slash final).
- * En production, définir VITE_SITE_URL dans .env (ex: https://sausset-reuni.fr).
+ * En production, définir VITE_SITE_URL dans .env (ex: https://saussetreuni.fr).
  */
 export const SITE_URL =
   typeof import.meta !== 'undefined' && import.meta.env?.VITE_SITE_URL
     ? import.meta.env.VITE_SITE_URL.replace(/\/$/, '')
-    : 'https://sausset-reuni.fr'
+    : 'https://saussetreuni.fr'
 
 export const SITE_NAME = 'Sausset Réuni 2026'
 /** Image absolue pour partage social (Open Graph, Twitter). */
