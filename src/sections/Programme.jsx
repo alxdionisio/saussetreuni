@@ -78,7 +78,7 @@ export default function Programme() {
             <div className={styles.encartText}>
               <strong className={styles.encartTitle}>Programme en construction avec vous</strong>
               <p className={styles.encartDesc}>
-                Prochaine réunion de concertation le <Link to="/calendrier" className={styles.encartLink}>lundi 23 février</Link> à 18h30.
+                Venez partager vos avis avec nous et participer à <Link to="/calendrier" className={styles.encartLink}>nos prochains échanges</Link>.
               </p>
             </div>
           </div>
