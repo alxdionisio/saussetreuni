@@ -76,9 +76,9 @@ export default function Programme() {
           <div className={styles.encart} role="status" aria-live="polite">
             <span className={styles.encartIcon} aria-hidden>📋</span>
             <div className={styles.encartText}>
-              <strong className={styles.encartTitle}>Programme en construction avec vous</strong>
+              <strong className={styles.encartTitle}>Un programme co-construit avec vous</strong>
               <p className={styles.encartDesc}>
-                Venez partager vos avis avec nous et participer à <Link to="/calendrier" className={styles.encartLink}>nos prochains échanges</Link>.
+                Venez partager vos idées lors de nos <Link to="/calendrier" className={styles.encartLink}>prochains rendez-vous</Link>.
               </p>
             </div>
           </div>
