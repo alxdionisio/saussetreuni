@@ -13,7 +13,7 @@ export const colistiers = [
   { order: 10, name: 'Mireille Corte', image: basePath + '103cb9fb-e41d-4373-99b7-29da541de371.jpg', id: '103cb9fb-e41d-4373-99b7-29da541de371' },
   { order: 11, name: 'Jacques Sabatier', image: basePath + '730bbe4b-9ca7-4486-9bc9-c80876419cf7.jpg', id: '730bbe4b-9ca7-4486-9bc9-c80876419cf7' },
   { order: 12, name: 'Judith Agopian-Besse', image: basePath + '5765ae07-563b-4f1f-9553-5a7b8c6d4c09.jpg', id: '5765ae07-563b-4f1f-9553-5a7b8c6d4c09' },
-  { order: 13, name: 'Alain Zipynoglou', image: basePath + 'de24fb64-e17c-4c2d-88a0-136e3a7a3c19.jpg', id: 'de24fb64-e17c-4c2d-88a0-136e3a7a3c19' },
+  { order: 13, name: 'Alain Zypinoglou', image: basePath + 'de24fb64-e17c-4c2d-88a0-136e3a7a3c19.jpg', id: 'de24fb64-e17c-4c2d-88a0-136e3a7a3c19' },
   { order: 14, name: 'Valérie Willemart', image: basePath + '4d0cce92-9daf-4070-9d66-5651c48a73dc.jpg', id: '4d0cce92-9daf-4070-9d66-5651c48a73dc' },
   { order: 15, name: 'François Villaescusa', image: basePath + '7f2c55e6-a65f-48a3-8534-4159dbe7d8a9.jpg', id: '7f2c55e6-a65f-48a3-8534-4159dbe7d8a9' },
   { order: 16, name: 'Christine Beaulieu', image: basePath + '2583861a-acb2-4cb1-9c00-382bead5e729.jpg', id: '2583861a-acb2-4cb1-9c00-382bead5e729' },
