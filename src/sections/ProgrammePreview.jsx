@@ -26,7 +26,7 @@ export default function ProgrammePreview() {
         <SectionTitle
           label="Notre programme"
           title="Un projet pour chaque Saussetois"
-          subtitle="Notre liste et notre candidat portent un projet municipal construit avec les habitants. Découvrez les grandes orientations pour le prochain mandat."
+          subtitle="Notre programme est disponible. Il a été élaboré avec les Saussetois et les Saussetoises. Découvrez les grandes orientations pour le prochain mandat."
         />
 
         <FadeIn>
@@ -46,7 +46,7 @@ export default function ProgrammePreview() {
         <FadeIn>
           <div className={styles.ctaWrap}>
             <Link to="/programme" className={styles.cta} onClick={() => trackEvent('cta_click', { cta: 'programme', location: 'programme_preview' })}>
-              Découvrir les grandes lignes du programme
+              Découvrir notre programme
               <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
               </svg>

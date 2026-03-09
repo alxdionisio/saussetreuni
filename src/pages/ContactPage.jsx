@@ -86,16 +86,16 @@ export default function ContactPage() {
             <div className={styles.infoCard}>
               <h3 className={styles.infoTitle}>Prochains événements</h3>
               <div className={styles.event}>
-                <span className={styles.eventDate}>Février 2026</span>
-                <span>Porte-à-porte & ateliers de proximité</span>
+                <span className={styles.eventDate}>13 mars 2026</span>
+                <span>Rencontre avec les Saussetois</span>
               </div>
               <div className={styles.event}>
-                <span className={styles.eventDate}>6 Mars 2026</span>
-                <span>Grande réunion publique — Gymnase</span>
-              </div>
-              <div className={styles.event}>
-                <span className={styles.eventDate}>15 Mars 2026</span>
+                <span className={styles.eventDate}>15 mars 2026</span>
                 <span>Premier tour des élections municipales</span>
+              </div>
+              <div className={styles.event}>
+                <span className={styles.eventDate}>22 mars 2026</span>
+                <span>Second tour des élections municipales</span>
               </div>
               <Link to="/calendrier" className={styles.calendarLink}>
                 Voir le calendrier →

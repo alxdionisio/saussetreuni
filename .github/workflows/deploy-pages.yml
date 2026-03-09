@@ -46,6 +46,8 @@ jobs:
 
       - name: Copy index.html to 404.html (SPA routing on GitHub Pages)
         run: cp dist/index.html dist/404.html
+      - name: Copy programme PDF with URL-safe name (évite 404 en iframe)
+        run: 'cp "dist/Sausset Reuni 2026 - Le programme.pdf" "dist/programme-sausset-reuni-2026.pdf"'
 
       - name: Setup Pages
         uses: actions/configure-pages@v4

@@ -12,6 +12,7 @@ const events = [
   { dateISO: '2026-02-26', startTime: '10:30', endTime: '12:30', title: 'Rencontre avec les saussetoises et saussetois — Secteur Aigue Bleue', time: '10h30-12h30', location: 'Point de rencontre : 4 rue Mozart' },
   { dateISO: '2026-02-28', startTime: '10:30', endTime: '12:30', title: 'Rencontre avec les saussetoises et saussetois — Secteur Grand Vallat', time: '10h30-12h30', location: 'Point de rencontre : Parking du Grand Vallat' },
   { dateISO: '2026-03-06', startTime: '18:30', title: 'Meeting de campagne', location: 'Gymnase Alain Calmat', time: '18h30', variant: 'meeting' },
+  { dateISO: '2026-03-13', title: 'Rencontre avec les saussetois', location: 'Salle des Arts', time: null },
   { dateISO: '2026-03-15', dateDisplay: { line1: 'Dimanche 15 mars', line2: '2026' }, title: 'Premier tour des élections municipales', location: 'Bureaux de vote', time: null, variant: 'first-round' },
   { dateISO: '2026-03-22', dateDisplay: { line1: 'Dimanche 22 mars', line2: '2026' }, title: 'Second tour des élections municipales', location: 'Bureaux de vote', time: null, variant: 'second-round' },
 ]
