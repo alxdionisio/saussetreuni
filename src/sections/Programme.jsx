@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import FadeIn from '../components/FadeIn'
 import SectionTitle from '../components/SectionTitle'
@@ -6,14 +7,23 @@ import styles from './Programme.module.css'
 
 const PROGRAMME_PDF_ORIGINAL = 'Sausset Reuni 2026 - Le programme.pdf'
 const PROGRAMME_PDF_SAFE = 'programme-sausset-reuni-2026.pdf'
+const ZOOM_MIN = 50
+const ZOOM_MAX = 200
+const ZOOM_STEP = 25
 
 export default function Programme() {
+  const [zoom, setZoom] = useState(100)
   const base = (import.meta.env.BASE_URL || '/').replace(/\/$/, '') || ''
   const pdfBaseUrl = import.meta.env.DEV
     ? `/${encodeURIComponent(PROGRAMME_PDF_ORIGINAL)}`
     : `${base}/${PROGRAMME_PDF_SAFE}`
   // Paramètres du lecteur PDF intégré (Chrome/Edge) : masquer barre d’outils et panneau latéral
-  const pdfUrl = `${pdfBaseUrl}#toolbar=0&navpanes=0&view=Fit&page=1`
+  const hashParams = zoom <= 100
+    ? 'toolbar=0&navpanes=0&view=FitH&page=1'
+    : `toolbar=0&navpanes=0&zoom=${zoom}&page=1`
+  const pdfUrl = `${pdfBaseUrl}#${hashParams}`
+  const zoomOut = () => setZoom((z) => Math.max(ZOOM_MIN, z - ZOOM_STEP))
+  const zoomIn = () => setZoom((z) => Math.min(ZOOM_MAX, z + ZOOM_STEP))
 
   return (
     <section className={styles.section} id="programme">
@@ -32,11 +42,43 @@ export default function Programme() {
 
         <FadeIn>
           <div className={styles.pdfEmbed}>
+            <div className={styles.pdfZoomBar}>
+              <button
+                type="button"
+                className={styles.pdfZoomBtn}
+                onClick={zoomOut}
+                disabled={zoom <= ZOOM_MIN}
+                aria-label="Réduire le zoom"
+              >
+                −
+              </button>
+              <span className={styles.pdfZoomLabel}>{zoom} %</span>
+              <button
+                type="button"
+                className={styles.pdfZoomBtn}
+                onClick={zoomIn}
+                disabled={zoom >= ZOOM_MAX}
+                aria-label="Augmenter le zoom"
+              >
+                +
+              </button>
+            </div>
             <iframe
+              key={zoom}
               src={pdfUrl}
               title="Programme Sausset Réuni 2026"
               className={styles.pdfIframe}
             />
+          </div>
+          <div className={styles.pdfMobileCta}>
+            <a
+              href={pdfUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={styles.pdfMobileBtn}
+            >
+              Ouvrir le programme (PDF)
+            </a>
           </div>
         </FadeIn>
 
