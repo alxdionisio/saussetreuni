@@ -32,6 +32,11 @@ export const ROUTE_META = {
     description:
       'Programme de la liste Sausset Réuni pour Sausset-les-Pins 2026 : sécurité, cadre de vie, jeunesse, aînés, culture, sport. En construction avec les habitants.',
   },
+  '/programme/projections': {
+    title: 'Projections — Salle des arts | Sausset Réuni 2026',
+    description:
+      'Découvrez la Salle des arts en avant/après et en vidéo. Les projets qui transforment Sausset-les-Pins.',
+  },
   '/liste': {
     title: 'La liste Sausset Réuni 2026 — Colistiers | Maxime Marchand',
     description:

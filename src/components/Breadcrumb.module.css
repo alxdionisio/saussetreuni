@@ -4,6 +4,15 @@
   background: var(--white);
 }
 
+/* Fil d'ariane centré (sans hero) */
+.breadcrumb.centered .list {
+  justify-content: center;
+}
+
+.breadcrumb.noBorder {
+  border-bottom: none;
+}
+
 /* Fil d'ariane sur la hero : centré, sans bordure, fond transparent */
 .breadcrumb.hero {
   border-bottom: none;

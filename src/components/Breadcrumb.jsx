@@ -2,8 +2,8 @@ import { Link, useLocation } from 'react-router-dom'
 import { buildBreadcrumbItems } from './StructuredData'
 import styles from './Breadcrumb.module.css'
 
-/** variant="light" pour hero sombre (texte clair). onHero centre le fil sur la hero et adapte le style. */
-export default function Breadcrumb({ variant, onHero = false }) {
+/** variant="light" pour hero sombre (texte clair). onHero centre le fil sur la hero et adapte le style. centered + noBorder : fil centré sans barre. */
+export default function Breadcrumb({ variant, onHero = false, centered = false, noBorder = false }) {
   const { pathname } = useLocation()
   const items = buildBreadcrumbItems(pathname)
 
@@ -13,11 +13,15 @@ export default function Breadcrumb({ variant, onHero = false }) {
     styles.breadcrumb,
     onHero ? styles.hero : '',
     variant === 'light' ? styles.light : '',
+    centered ? styles.centered : '',
+    noBorder ? styles.noBorder : '',
   ].filter(Boolean).join(' ')
+
+  const listCentered = onHero || centered
 
   return (
     <nav className={className} aria-label="Fil d'Ariane">
-      <ol className={`${styles.list} ${onHero ? styles.listCentered : ''}`} itemScope itemType="https://schema.org/BreadcrumbList">
+      <ol className={`${styles.list} ${listCentered ? styles.listCentered : ''}`} itemScope itemType="https://schema.org/BreadcrumbList">
         {items.map((item, i) => (
           <li
             key={item.url}

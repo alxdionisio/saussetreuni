@@ -9,6 +9,7 @@ import CookieBanner from './components/CookieBanner'
 import GA4PageView from './components/GA4PageView'
 import HomePage from './pages/HomePage'
 import ProgrammePage from './pages/ProgrammePage'
+import ProjectionsPage from './pages/ProjectionsPage'
 import ComiteSoutien from './pages/ComiteSoutien'
 import Calendrier from './pages/Calendrier'
 import Liste from './pages/Liste'
@@ -29,6 +30,7 @@ export default function App() {
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/programme" element={<ProgrammePage />} />
+          <Route path="/programme/projections" element={<ProjectionsPage />} />
           <Route path="/comite-soutien" element={<ComiteSoutien />} />
           <Route path="/calendrier" element={<Calendrier />} />
           <Route path="/liste" element={<Liste />} />

@@ -5,6 +5,7 @@ import { SITE_URL, SITE_NAME } from '../lib/siteConfig'
 export const BREADCRUMB_LABELS = {
   '/': 'Accueil',
   '/programme': 'Programme',
+  '/programme/projections': 'Projections',
   '/liste': 'La liste',
   '/comite-soutien': 'Comité de soutien',
   '/calendrier': 'Calendrier',

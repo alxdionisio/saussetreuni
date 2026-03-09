@@ -102,8 +102,11 @@ export default function Programme() {
         </FadeIn>
 
         <div className={styles.internalLinks}>
-          <Link to="/calendrier" className={styles.internalLinkBtn}>Voir le calendrier des événements</Link>
-          <Link to="/contact" className={styles.internalLinkBtn}>Nous contacter</Link>
+          <Link to="/programme/projections" className={styles.projectionsCta}>Découvrir les projections</Link>
+          <div className={styles.internalLinksSecondary}>
+            <Link to="/calendrier" className={styles.internalLinkBtn}>Voir le calendrier des événements</Link>
+            <Link to="/contact" className={styles.internalLinkBtn}>Nous contacter</Link>
+          </div>
         </div>
       </div>
     </section>
