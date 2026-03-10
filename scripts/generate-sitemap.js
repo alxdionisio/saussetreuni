@@ -16,6 +16,7 @@ const baseUrl = (process.env.VITE_SITE_URL || 'https://saussetreuni.fr').replace
 const paths = [
   '',
   '/programme',
+  '/programme/projections',
   '/comite-soutien',
   '/calendrier',
   '/liste',
