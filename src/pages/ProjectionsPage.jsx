@@ -4,6 +4,7 @@ import FadeIn from '../components/FadeIn'
 import SectionTitle from '../components/SectionTitle'
 import Breadcrumb from '../components/Breadcrumb'
 import BeforeAfterSlider from '../components/BeforeAfterSlider'
+import LazyVideo from '../components/LazyVideo'
 import styles from './ProjectionsPage.module.css'
 
 // URL absolue depuis la racine du serveur pour les fichiers public/ (évite ./ en dev qui casse le chargement)
@@ -100,15 +101,14 @@ export default function ProjectionsPage() {
                   <div className={styles.block}>
                     <h2 className={styles.subtitle}>Vidéo de présentation — Salle des arts</h2>
                     <div className={styles.videoWrap}>
-                      <video
+                      <LazyVideo
                         className={styles.video}
                         src={VIDEO_SALLE}
-                        controls
-                        preload="metadata"
+                        poster={IMAGE_FIN}
                         title="Présentation de la Salle des arts"
                       >
                         Votre navigateur ne prend pas en charge la lecture de vidéos.
-                      </video>
+                      </LazyVideo>
                     </div>
                   </div>
                 </FadeIn>
@@ -130,15 +130,14 @@ export default function ProjectionsPage() {
                   <div className={styles.block}>
                     <h2 className={styles.subtitle}>Vidéo de présentation — Salle des arts (2e vue)</h2>
                     <div className={styles.videoWrap}>
-                      <video
+                      <LazyVideo
                         className={styles.video}
                         src={VIDEO_SALLE_2}
-                        controls
-                        preload="metadata"
+                        poster={IMAGE_FIN_2}
                         title="Présentation de la Salle des arts — 2e vue"
                       >
                         Votre navigateur ne prend pas en charge la lecture de vidéos.
-                      </video>
+                      </LazyVideo>
                     </div>
                     <p className={styles.illustrationNotice}>{ILLUSTRATION_NOTICE}</p>
                   </div>
@@ -171,15 +170,14 @@ export default function ProjectionsPage() {
                   <div className={styles.block}>
                     <h2 className={styles.subtitle}>Vidéo de présentation — Stade</h2>
                     <div className={styles.videoWrap}>
-                      <video
+                      <LazyVideo
                         className={styles.video}
                         src={VIDEO_STADE}
-                        controls
-                        preload="metadata"
+                        poster={IMAGE_STADE_FIN}
                         title="Présentation du Stade"
                       >
                         Votre navigateur ne prend pas en charge la lecture de vidéos.
-                      </video>
+                      </LazyVideo>
                     </div>
                     <p className={styles.illustrationNotice}>{ILLUSTRATION_NOTICE}</p>
                   </div>
@@ -212,15 +210,14 @@ export default function ProjectionsPage() {
                   <div className={styles.block}>
                     <h2 className={styles.subtitle}>Vidéo de présentation — Capitainerie</h2>
                     <div className={styles.videoWrap}>
-                      <video
+                      <LazyVideo
                         className={styles.video}
                         src={VIDEO_CAPITAINERIE}
-                        controls
-                        preload="metadata"
+                        poster={IMAGE_CAPITAINERIE_FIN}
                         title="Présentation de la Capitainerie"
                       >
                         Votre navigateur ne prend pas en charge la lecture de vidéos.
-                      </video>
+                      </LazyVideo>
                     </div>
                     <p className={styles.illustrationNotice}>{ILLUSTRATION_NOTICE}</p>
                   </div>
@@ -253,15 +250,14 @@ export default function ProjectionsPage() {
                   <div className={styles.block}>
                     <h2 className={styles.subtitle}>Vidéo de présentation — Parc du barrage</h2>
                     <div className={styles.videoWrap}>
-                      <video
+                      <LazyVideo
                         className={styles.video}
                         src={VIDEO_PARC}
-                        controls
-                        preload="metadata"
+                        poster={IMAGE_PARC_FIN}
                         title="Présentation du Parc du barrage"
                       >
                         Votre navigateur ne prend pas en charge la lecture de vidéos.
-                      </video>
+                      </LazyVideo>
                     </div>
                     <p className={styles.illustrationNotice}>{ILLUSTRATION_NOTICE}</p>
                   </div>
@@ -294,15 +290,14 @@ export default function ProjectionsPage() {
                   <div className={styles.block}>
                     <h2 className={styles.subtitle}>Vidéo de présentation — Padel</h2>
                     <div className={styles.videoWrap}>
-                      <video
+                      <LazyVideo
                         className={styles.video}
                         src={VIDEO_PADEL}
-                        controls
-                        preload="metadata"
+                        poster={IMAGE_PADEL_FIN}
                         title="Présentation du Padel"
                       >
                         Votre navigateur ne prend pas en charge la lecture de vidéos.
-                      </video>
+                      </LazyVideo>
                     </div>
                     <p className={styles.illustrationNotice}>{ILLUSTRATION_NOTICE}</p>
                   </div>
@@ -335,15 +330,14 @@ export default function ProjectionsPage() {
                   <div className={styles.block}>
                     <h2 className={styles.subtitle}>Vidéo de présentation — École Jules Ferry</h2>
                     <div className={styles.videoWrap}>
-                      <video
+                      <LazyVideo
                         className={styles.video}
                         src={VIDEO_ECOLE}
-                        controls
-                        preload="metadata"
+                        poster={IMAGE_ECOLE_FIN}
                         title="Présentation de l’École Jules Ferry"
                       >
                         Votre navigateur ne prend pas en charge la lecture de vidéos.
-                      </video>
+                      </LazyVideo>
                     </div>
                     <p className={styles.illustrationNotice}>{ILLUSTRATION_NOTICE}</p>
                   </div>
