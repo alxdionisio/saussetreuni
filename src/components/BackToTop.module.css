@@ -1,0 +1,46 @@
+.button {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  z-index: 100;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: none;
+  background: var(--color-primary);
+  color: var(--white);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 16px rgba(6, 60, 71, 0.35);
+  transition: background 0.2s, transform 0.2s, opacity 0.2s;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.button:hover {
+  background: var(--color-dark);
+  transform: translateY(-2px);
+}
+
+.button:active {
+  transform: translateY(0);
+}
+
+.icon {
+  font-size: 1.4rem;
+  line-height: 1;
+  font-weight: 700;
+}
+
+@media (max-width: 768px) {
+  .button {
+    bottom: 1.25rem;
+    right: 1.25rem;
+    width: 44px;
+    height: 44px;
+  }
+  .icon {
+    font-size: 1.25rem;
+  }
+}
