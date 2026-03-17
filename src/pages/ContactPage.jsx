@@ -86,12 +86,8 @@ export default function ContactPage() {
             <div className={styles.infoCard}>
               <h3 className={styles.infoTitle}>Prochains événements</h3>
               <div className={styles.event}>
-                <span className={styles.eventDate}>13 mars 2026</span>
-                <span>Rencontre avec les Saussetois</span>
-              </div>
-              <div className={styles.event}>
-                <span className={styles.eventDate}>15 mars 2026</span>
-                <span>Premier tour des élections municipales</span>
+                <span className={styles.eventDate}>19 mars 2026</span>
+                <span>Réunion publique à 18h30 au Gymnase A. Calmat</span>
               </div>
               <div className={styles.event}>
                 <span className={styles.eventDate}>22 mars 2026</span>

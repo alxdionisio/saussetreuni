@@ -14,6 +14,7 @@ const events = [
   { dateISO: '2026-03-06', startTime: '18:30', title: 'Meeting de campagne', location: 'Gymnase Alain Calmat', time: '18h30', variant: 'meeting' },
   { dateISO: '2026-03-13', title: 'Rencontre avec les saussetois', location: 'Salle des Arts', time: null },
   { dateISO: '2026-03-15', dateDisplay: { line1: 'Dimanche 15 mars', line2: '2026' }, title: 'Premier tour des élections municipales', location: 'Bureaux de vote', time: null, variant: 'first-round' },
+  { dateISO: '2026-03-19', startTime: '18:30', title: 'Réunion publique', location: 'Gymnase A. Calmat', time: '18h30' },
   { dateISO: '2026-03-22', dateDisplay: { line1: 'Dimanche 22 mars', line2: '2026' }, title: 'Second tour des élections municipales', location: 'Bureaux de vote', time: null, variant: 'second-round' },
 ]
 

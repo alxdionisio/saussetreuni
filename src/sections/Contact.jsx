@@ -64,6 +64,10 @@ export default function Contact() {
                   <span className={styles.eventDate}>15 Mars 2026</span>
                   <span>Premier tour des élections municipales</span>
                 </div>
+                <div className={styles.event}>
+                  <span className={styles.eventDate}>19 Mars 2026</span>
+                  <span>Réunion publique à 18h30 — Gymnase A. Calmat</span>
+                </div>
               </div>
 
               <div className={styles.infoCard}>

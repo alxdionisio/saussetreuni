@@ -5,7 +5,7 @@ import ProgrammePreview from '../sections/ProgrammePreview'
 import ListePreview from '../sections/ListePreview'
 import Candidat from '../sections/Candidat'
 import Engagements from '../sections/Engagements'
-import ContactCTA from '../sections/ContactCTA'
+import BoiteAQuestions from '../sections/BoiteAQuestions'
 
 export default function HomePage() {
   const location = useLocation()
@@ -27,7 +27,7 @@ export default function HomePage() {
       <Candidat />
       <ListePreview />
       <Engagements />
-      <ContactCTA />
+      <BoiteAQuestions />
     </>
   )
 }
