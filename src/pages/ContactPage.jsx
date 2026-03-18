@@ -4,10 +4,9 @@ import FadeIn from '../components/FadeIn'
 import SectionTitle from '../components/SectionTitle'
 import Breadcrumb from '../components/Breadcrumb'
 import { useCookieConsent } from '../contexts/CookieConsentContext'
+import { FORM_SUBMIT_URL } from '../lib/formEndpoint'
 import styles from './ContactPage.module.css'
 
-const FORMSPREE_ID = 'mbdagbly'
-const FORMSPREE_URL = `https://formspree.io/f/${FORMSPREE_ID}`
 const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
 
 export default function ContactPage() {
@@ -37,7 +36,7 @@ export default function ContactPage() {
 
     setStatus('sending')
     try {
-      const res = await fetch(FORMSPREE_URL, {
+      const res = await fetch(FORM_SUBMIT_URL, {
         method: 'POST',
         body: new FormData(form),
         headers: { Accept: 'application/json' },
@@ -111,7 +110,7 @@ export default function ContactPage() {
           <FadeIn direction="right">
             <form
               className={styles.form}
-              action={FORMSPREE_URL}
+              action={FORM_SUBMIT_URL}
               method="POST"
               onSubmit={handleSubmit}
               noValidate

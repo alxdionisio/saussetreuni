@@ -2,9 +2,8 @@ import { useState } from 'react'
 import FadeIn from '../components/FadeIn'
 import SectionTitle from '../components/SectionTitle'
 import { useCookieConsent } from '../contexts/CookieConsentContext'
+import { FORM_SUBMIT_URL } from '../lib/formEndpoint'
 import styles from './Contact.module.css'
-
-const FORMSPREE_URL = 'https://formspree.io/f/mbdagbly'
 
 export default function Contact() {
   const { trackEvent } = useCookieConsent()
@@ -15,7 +14,7 @@ export default function Contact() {
     const form = e.target
     setStatus('sending')
     try {
-      const res = await fetch(FORMSPREE_URL, {
+      const res = await fetch(FORM_SUBMIT_URL, {
         method: 'POST',
         body: new FormData(form),
         headers: { Accept: 'application/json' },
@@ -84,7 +83,7 @@ export default function Contact() {
           <FadeIn direction="right">
             <form
               className={styles.form}
-              action={FORMSPREE_URL}
+              action={FORM_SUBMIT_URL}
               method="POST"
               onSubmit={handleSubmit}
             >

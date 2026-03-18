@@ -3,9 +3,8 @@ import { Link } from 'react-router-dom'
 import FadeIn from '../components/FadeIn'
 import SectionTitle from '../components/SectionTitle'
 import { useCookieConsent } from '../contexts/CookieConsentContext'
+import { FORM_SUBMIT_URL } from '../lib/formEndpoint'
 import styles from './BoiteAQuestions.module.css'
-
-const FORMSPREE_URL = 'https://formspree.io/f/mbdagbly'
 
 export default function BoiteAQuestions() {
   const { trackEvent } = useCookieConsent()
@@ -18,7 +17,7 @@ export default function BoiteAQuestions() {
     if (!message) return
     setStatus('sending')
     try {
-      const res = await fetch(FORMSPREE_URL, {
+      const res = await fetch(FORM_SUBMIT_URL, {
         method: 'POST',
         body: new FormData(form),
         headers: { Accept: 'application/json' },
@@ -53,7 +52,7 @@ export default function BoiteAQuestions() {
           <div className={styles.formWrap}>
             <form
               className={styles.form}
-              action={FORMSPREE_URL}
+              action={FORM_SUBMIT_URL}
               method="POST"
               onSubmit={handleSubmit}
             >
