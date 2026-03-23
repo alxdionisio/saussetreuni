@@ -368,6 +368,18 @@
   margin: 0;
 }
 
+.formFeedback .checkboxLink {
+  color: var(--white);
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.formFeedback .checkboxLink:hover {
+  color: var(--white);
+  opacity: 0.95;
+}
+
 .formFeedbackError {
   background: rgba(254, 226, 226, 0.1);
   border-color: rgba(254, 202, 202, 0.35);

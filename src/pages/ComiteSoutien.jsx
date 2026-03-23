@@ -19,6 +19,7 @@ const pourquoiRejoindre = [
 ]
 
 export default function ComiteSoutien() {
+  const campaignClosed = true
   const { trackEvent } = useCookieConsent()
   const [errors, setErrors] = useState({})
   const [status, setStatus] = useState('idle') // 'idle' | 'sending' | 'success' | 'error'
@@ -125,8 +126,8 @@ export default function ComiteSoutien() {
               <div className={styles.howCard}>
                 <h3 className={styles.howCardTitle}>En ligne</h3>
                 <p className={styles.howCardText}>
-                  Remplissez le formulaire ci-dessous. Nous vous recontactons sous 24 h.<br/>Vous
-                  pouvez aussi nous laisser un message ou vos disponibilités.
+                  Les inscriptions en ligne au comité de soutien sont désormais closes.
+                  Vous pouvez toujours nous contacter via la page de contact.
                 </p>
               </div>
             </div>
@@ -137,21 +138,39 @@ export default function ComiteSoutien() {
           <div className="container">
             <FadeIn>
               <div className={styles.formWrapper}>
-                <h2 className={styles.formTitle}>Formulaire d'inscription</h2>
-                <p className={styles.formSubtitle}>
-                  Remplissez le formulaire pour rejoindre le comité de soutien. Nous vous
-                  recontactons rapidement.
-                </p>
-                <motion.form
-                  className={styles.form}
-                  action={FORM_SUBMIT_URL}
-                  method="POST"
-                  onSubmit={handleSubmit}
-                  noValidate
-                  initial={{ opacity: 0, y: 16 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.4, delay: 0.2 }}
-                >
+                <h2 className={styles.formTitle}>
+                  {campaignClosed ? 'Campagne terminée' : "Formulaire d'inscription"}
+                </h2>
+                {campaignClosed ? (
+                  <div className={styles.formFeedback} role="status" aria-live="polite">
+                    <p className={styles.formFeedbackTitle}>Les inscriptions sont closes</p>
+                    <p className={styles.formFeedbackText}>
+                      La campagne municipale est à présent terminée. Merci pour votre mobilisation.
+                    </p>
+                    <p className={styles.formFeedbackText}>
+                      Pour toute question, vous pouvez nous écrire via la{' '}
+                      <Link to="/contact" className={styles.checkboxLink}>
+                        page de contact
+                      </Link>
+                      .
+                    </p>
+                  </div>
+                ) : (
+                  <>
+                    <p className={styles.formSubtitle}>
+                      Remplissez le formulaire pour rejoindre le comité de soutien. Nous vous
+                      recontactons rapidement.
+                    </p>
+                    <motion.form
+                      className={styles.form}
+                      action={FORM_SUBMIT_URL}
+                      method="POST"
+                      onSubmit={handleSubmit}
+                      noValidate
+                      initial={{ opacity: 0, y: 16 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.4, delay: 0.2 }}
+                    >
                   <input type="hidden" name="_subject" value="Inscription comité de soutien (Sausset Réuni)" />
                   <input type="hidden" name="Type de demande" value="Inscription comité de soutien" />
                   {status === 'success' && (
@@ -306,7 +325,9 @@ export default function ComiteSoutien() {
                   </button>
                     </>
                   )}
-                </motion.form>
+                    </motion.form>
+                  </>
+                )}
               </div>
             </FadeIn>
           </div>

@@ -97,6 +97,19 @@ export default function Calendrier() {
 
       <div className="container">
         <section className={styles.section}>
+          <FadeIn>
+            <div className={styles.campaignNotice}>
+              <h2 className={styles.campaignNoticeTitle}>Campagne terminée</h2>
+              <p className={styles.campaignNoticeText}>
+                La campagne municipale est maintenant terminée.
+              </p>
+              <p className={styles.campaignNoticeText}>
+                Merci à toutes les Saussetoises et à tous les Saussetois pour leur engagement à nos côtés
+                et pour la confiance qu'ils nous ont accordée.
+              </p>
+            </div>
+          </FadeIn>
+
           {eventsEnCours.length > 0 && (
             <FadeIn>
               <h2 className={styles.eventBlockTitle}>En cours</h2>

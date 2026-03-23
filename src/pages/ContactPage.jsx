@@ -84,16 +84,12 @@ export default function ContactPage() {
 
             <div className={styles.infoCard}>
               <h3 className={styles.infoTitle}>Prochains événements</h3>
-              <div className={styles.event}>
-                <span className={styles.eventDate}>19 mars 2026</span>
-                <span>Réunion publique à 18h30 au Gymnase A. Calmat</span>
-              </div>
-              <div className={styles.event}>
-                <span className={styles.eventDate}>22 mars 2026</span>
-                <span>Second tour des élections municipales</span>
-              </div>
+              <p className={styles.infoMuted}>
+                La campagne est à présent terminée. Merci aux Saussetoises et aux Saussetois
+                pour leur engagement à nos côtés et leur confiance.
+              </p>
               <Link to="/calendrier" className={styles.calendarLink}>
-                Voir le calendrier →
+                Voir le calendrier de campagne →
               </Link>
             </div>
 

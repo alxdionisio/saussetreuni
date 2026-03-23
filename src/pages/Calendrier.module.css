@@ -41,6 +41,33 @@
   margin: 0 auto;
 }
 
+.campaignNotice {
+  background: var(--white);
+  border: 2px solid var(--color-primary);
+  border-radius: 16px;
+  padding: 1.5rem 1.75rem;
+  margin-bottom: 2rem;
+}
+
+.campaignNoticeTitle {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--gray-800);
+  margin-bottom: 0.6rem;
+}
+
+.campaignNoticeText {
+  font-size: 0.98rem;
+  color: var(--gray-700);
+  line-height: 1.65;
+  margin: 0;
+}
+
+.campaignNoticeText + .campaignNoticeText {
+  margin-top: 0.5rem;
+}
+
 .eventBlockTitle {
   font-family: var(--font-display);
   font-size: 1.25rem;
@@ -185,6 +212,17 @@
   .eventList {
     gap: 0.75rem;
     margin-bottom: 2rem;
+  }
+  .campaignNotice {
+    padding: 1.25rem 1.125rem;
+    border-radius: 12px;
+    margin-bottom: 1.5rem;
+  }
+  .campaignNoticeTitle {
+    font-size: 1.1rem;
+  }
+  .campaignNoticeText {
+    font-size: 0.92rem;
   }
   .eventCard {
     flex-direction: column;

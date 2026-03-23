@@ -8,6 +8,7 @@ import Seo from './components/Seo'
 import StructuredData from './components/StructuredData'
 import CookieBanner from './components/CookieBanner'
 import GA4PageView from './components/GA4PageView'
+import ResultModal from './components/ResultModal'
 import HomePage from './pages/HomePage'
 import ProgrammePage from './pages/ProgrammePage'
 import ProjectionsPage from './pages/ProjectionsPage'
@@ -43,6 +44,7 @@ export default function App() {
       </main>
       <Footer />
       <BackToTop />
+      <ResultModal />
       <CookieBanner />
     </>
   )
