@@ -1,5 +1,5 @@
 /**
- * Thèmes du programme — onglets par thématique.
+ * Thèmes du programme - onglets par thématique.
  * intro: paragraphe de description (contenu du document).
  * items: points complémentaires (liste à puces).
  */

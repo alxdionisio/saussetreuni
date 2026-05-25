@@ -1,5 +1,5 @@
 /**
- * Endpoint d'envoi des formulaires (FormSubmit.co — soumissions illimitées).
+ * Endpoint d'envoi des formulaires (FormSubmit.co - soumissions illimitées).
  * Remplace Formspree pour éviter les blocages liés au quota.
  *
  * À la première utilisation, FormSubmit envoie un email de confirmation à

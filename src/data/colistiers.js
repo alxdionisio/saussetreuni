@@ -38,7 +38,7 @@ export function getOrdinalLabel(position) {
   return `${position}ème`
 }
 
-/** Libellé rôle : 1–8 = adjoints (1er adjoint … 8ème adjoint), 10 = 9ème adjoint (10ème élu), 11–29 = Nème élu */
+/** Libellé rôle : 1-8 = adjoints (1er adjoint … 8ème adjoint), 10 = 9ème adjoint (10ème élu), 11-29 = Nème élu */
 function getRoleLabel(order) {
   if (order >= 1 && order <= 8) {
     if (order === 1) return '1er adjoint'
@@ -51,7 +51,7 @@ function getRoleLabel(order) {
 
 /** Nom affiché (Prénom Nom) */
 export function getDisplayName(c) {
-  return c.name || '—'
+  return c.name || '-'
 }
 
 /** Alt pour l’image : nom et rôle (adjoint / élu) */

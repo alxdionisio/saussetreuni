@@ -31,9 +31,11 @@ export default function ProgrammePreview() {
 
         <FadeIn>
           <div className={styles.cards}>
-            {previewThemes.map((t) => (
+            {previewThemes.map((t, i) => (
               <div key={t.id} className={styles.card}>
-                <span className={styles.cardIcon}>{t.icon}</span>
+                <span className={styles.cardIcon} aria-hidden="true">
+                  {String(i + 1).padStart(2, '0')}
+                </span>
                 <h3 className={styles.cardTitle}>{t.label}</h3>
                 <p className={styles.cardDesc}>
                   {t.intro || (t.items && t.items[0])}

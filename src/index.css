@@ -6,34 +6,51 @@
 }
 
 :root {
-  /* Palette — Campagne Sausset Réuni 2026 */
-  --color-dark: #063c47;
-  --color-primary: #318a93;
-  --color-primary-light: #4a9ea6;
-  --color-primary-muted: rgba(49, 138, 147, 0.15);
+  /* ===== Palette - Sausset Réuni 2026 (éditorial civique, OKLCH) ===== */
+  /* Marque : teal côtier méditerranéen (couleur engagée, structure) */
+  --color-dark: oklch(34% 0.046 205);
+  --color-primary: oklch(56% 0.072 200);
+  --color-primary-light: oklch(66% 0.074 198);
+  --color-primary-muted: oklch(56% 0.072 200 / 0.14);
+
+  /* Accent chaud : sable / terracotta (filets, focus, emphasis ≤10%) */
+  --accent: oklch(66% 0.132 48);
+  --accent-strong: oklch(58% 0.142 44);
+  --accent-soft: oklch(66% 0.132 48 / 0.14);
+
+  /* Neutres tintés - papier chaud / encre teal (jamais #fff ni #000) */
+  --paper: oklch(98.5% 0.006 90);
+  --paper-alt: oklch(96.4% 0.009 95);
+  --ink: oklch(26% 0.02 222);
+  --ink-soft: oklch(45% 0.016 222);
+  --ink-mute: oklch(58% 0.014 222);
+  --line: oklch(89% 0.01 210);
+  --line-strong: oklch(82% 0.013 210);
+
+  /* Aliases rétro-compatibles (l'existant continue de fonctionner) */
   --teal: var(--color-primary);
   --teal-dark: var(--color-dark);
   --teal-light: var(--color-primary-light);
   --teal-muted: var(--color-primary-muted);
-  --blue-deep: #063c47;
-  --blue-navy: #0a4d56;
+  --blue-deep: var(--color-dark);
+  --blue-navy: oklch(40% 0.05 205);
   --blue-ocean: var(--color-primary);
   --blue-sky: var(--color-primary-light);
-  --blue-light: #7eb5bb;
-  --gold: var(--color-primary);
-  --gold-light: var(--color-primary-light);
-  --sand: #f6f9fa;
-  --sand-light: #eef3f5;
-  --white: #ffffff;
-  --gray-100: #f3f4f6;
-  --gray-200: #e5e7eb;
-  --gray-400: #9ca3af;
-  --gray-600: #4b5563;
-  --gray-800: #1f2937;
-  --color-error: #b91c1c;
+  --blue-light: oklch(74% 0.05 200);
+  --gold: var(--accent);
+  --gold-light: var(--accent);
+  --sand: var(--paper-alt);
+  --sand-light: var(--paper-alt);
+  --white: var(--paper);
+  --gray-100: oklch(96% 0.006 210);
+  --gray-200: var(--line);
+  --gray-400: var(--ink-mute);
+  --gray-600: var(--ink-soft);
+  --gray-800: var(--ink);
+  --color-error: oklch(52% 0.17 27);
 
   /* Typography */
-  --font-display: 'Playfair Display', Georgia, serif;
+  --font-display: 'Fraunces', 'Georgia', serif;
   --font-heading: 'Montserrat', sans-serif;
   --font-body: 'Source Sans 3', 'Segoe UI', sans-serif;
 
@@ -41,6 +58,17 @@
   --section-padding: clamp(4rem, 8vw, 8rem);
   --container-max: 1200px;
   --container-padding: clamp(1.25rem, 4vw, 3rem);
+  --measure: 68ch;
+
+  /* Rayons - resserrés (moins « bulle ») */
+  --radius-sm: 5px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+
+  /* Élévation - ombres teintées teal, basses et larges (pas de noir dur) */
+  --shadow-sm: 0 1px 2px oklch(34% 0.046 205 / 0.06), 0 2px 8px oklch(34% 0.046 205 / 0.05);
+  --shadow-md: 0 4px 12px oklch(34% 0.046 205 / 0.08), 0 12px 28px oklch(34% 0.046 205 / 0.07);
+  --shadow-lg: 0 12px 28px oklch(34% 0.046 205 / 0.12), 0 24px 56px oklch(34% 0.046 205 / 0.10);
 
   /* Transitions */
   --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
@@ -57,9 +85,10 @@ body {
   font-family: var(--font-body);
   font-weight: 400;
   line-height: 1.7;
-  color: var(--gray-800);
-  background: var(--white);
+  color: var(--ink);
+  background: var(--paper);
   overflow-x: hidden;
+  text-rendering: optimizeLegibility;
 }
 
 /* Contenu principal : bloc explicite pour que les pages (dont légales) s’affichent */
@@ -69,13 +98,25 @@ main {
 }
 
 h1,
-h2 {
-  font-family: var(--font-heading) !important;
+h2,
+h3 {
+  text-wrap: balance;
+}
+
+p {
+  text-wrap: pretty;
 }
 
 a {
   text-decoration: none;
   color: inherit;
+}
+
+/* Focus visible cohérent - anneau accent chaud */
+:focus-visible {
+  outline: 2px solid var(--accent-strong);
+  outline-offset: 2px;
+  border-radius: 2px;
 }
 
 img {
@@ -130,8 +171,20 @@ ul, ol {
 
 /* ===== SELECTION ===== */
 ::selection {
-  background: var(--color-primary);
-  color: var(--white);
+  background: var(--accent-soft);
+  color: var(--ink);
+}
+
+/* ===== ACCESSIBILITÉ : mouvement réduit ===== */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }
 
 /* ===== PAGES LÉGALES (Mentions légales, Politique de confidentialité) ===== */

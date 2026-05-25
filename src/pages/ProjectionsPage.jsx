@@ -85,7 +85,7 @@ export default function ProjectionsPage() {
               >
                 <FadeIn key="salle">
                   <div className={styles.block}>
-                    <h2 className={styles.subtitle}>Salle des arts — Avant / Après</h2>
+                    <h2 className={styles.subtitle}>Salle des arts - Avant / Après</h2>
                     <p className={styles.intro}>
                       Glissez la barre pour comparer l’état des lieux avant travaux et le résultat après rénovation.
                     </p>
@@ -99,7 +99,7 @@ export default function ProjectionsPage() {
                 </FadeIn>
                 <FadeIn delay={0.1} key="salle-video">
                   <div className={styles.block}>
-                    <h2 className={styles.subtitle}>Vidéo de présentation — Salle des arts</h2>
+                    <h2 className={styles.subtitle}>Vidéo de présentation - Salle des arts</h2>
                     <div className={styles.videoWrap}>
                       <LazyVideo
                         className={styles.video}
@@ -114,7 +114,7 @@ export default function ProjectionsPage() {
                 </FadeIn>
                 <FadeIn delay={0.15} key="salle-2">
                   <div className={styles.block}>
-                    <h2 className={styles.subtitle}>Salle des arts — Avant / Après (2e vue)</h2>
+                    <h2 className={styles.subtitle}>Salle des arts - Avant / Après (2e vue)</h2>
                     <p className={styles.intro}>
                       Glissez la barre pour comparer l’état des lieux avant travaux et le résultat après rénovation.
                     </p>
@@ -128,13 +128,13 @@ export default function ProjectionsPage() {
                 </FadeIn>
                 <FadeIn delay={0.2} key="salle-video-2">
                   <div className={styles.block}>
-                    <h2 className={styles.subtitle}>Vidéo de présentation — Salle des arts (2e vue)</h2>
+                    <h2 className={styles.subtitle}>Vidéo de présentation - Salle des arts (2e vue)</h2>
                     <div className={styles.videoWrap}>
                       <LazyVideo
                         className={styles.video}
                         src={VIDEO_SALLE_2}
                         poster={IMAGE_FIN_2}
-                        title="Présentation de la Salle des arts — 2e vue"
+                        title="Présentation de la Salle des arts - 2e vue"
                       >
                         Votre navigateur ne prend pas en charge la lecture de vidéos.
                       </LazyVideo>
@@ -154,7 +154,7 @@ export default function ProjectionsPage() {
               >
                 <FadeIn key="stade">
                   <div className={styles.block}>
-                    <h2 className={styles.subtitle}>Stade — Avant / Après</h2>
+                    <h2 className={styles.subtitle}>Stade - Avant / Après</h2>
                     <p className={styles.intro}>
                       Glissez la barre pour comparer l’état des lieux avant travaux et le résultat après rénovation.
                     </p>
@@ -168,7 +168,7 @@ export default function ProjectionsPage() {
                 </FadeIn>
                 <FadeIn delay={0.1} key="stade-video">
                   <div className={styles.block}>
-                    <h2 className={styles.subtitle}>Vidéo de présentation — Stade</h2>
+                    <h2 className={styles.subtitle}>Vidéo de présentation - Stade</h2>
                     <div className={styles.videoWrap}>
                       <LazyVideo
                         className={styles.video}
@@ -194,7 +194,7 @@ export default function ProjectionsPage() {
               >
                 <FadeIn key="capitainerie">
                   <div className={styles.block}>
-                    <h2 className={styles.subtitle}>Capitainerie — Avant / Après</h2>
+                    <h2 className={styles.subtitle}>Capitainerie - Avant / Après</h2>
                     <p className={styles.intro}>
                       Glissez la barre pour comparer l’état des lieux avant travaux et le résultat après rénovation.
                     </p>
@@ -208,7 +208,7 @@ export default function ProjectionsPage() {
                 </FadeIn>
                 <FadeIn delay={0.1} key="capitainerie-video">
                   <div className={styles.block}>
-                    <h2 className={styles.subtitle}>Vidéo de présentation — Capitainerie</h2>
+                    <h2 className={styles.subtitle}>Vidéo de présentation - Capitainerie</h2>
                     <div className={styles.videoWrap}>
                       <LazyVideo
                         className={styles.video}
@@ -234,7 +234,7 @@ export default function ProjectionsPage() {
               >
                 <FadeIn key="parc">
                   <div className={styles.block}>
-                    <h2 className={styles.subtitle}>Parc du barrage — Avant / Après</h2>
+                    <h2 className={styles.subtitle}>Parc du barrage - Avant / Après</h2>
                     <p className={styles.intro}>
                       Glissez la barre pour comparer l’état des lieux avant travaux et le résultat après rénovation.
                     </p>
@@ -248,7 +248,7 @@ export default function ProjectionsPage() {
                 </FadeIn>
                 <FadeIn delay={0.1} key="parc-video">
                   <div className={styles.block}>
-                    <h2 className={styles.subtitle}>Vidéo de présentation — Parc du barrage</h2>
+                    <h2 className={styles.subtitle}>Vidéo de présentation - Parc du barrage</h2>
                     <div className={styles.videoWrap}>
                       <LazyVideo
                         className={styles.video}
@@ -274,7 +274,7 @@ export default function ProjectionsPage() {
               >
                 <FadeIn key="padel">
                   <div className={styles.block}>
-                    <h2 className={styles.subtitle}>Padel — Avant / Après</h2>
+                    <h2 className={styles.subtitle}>Padel - Avant / Après</h2>
                     <p className={styles.intro}>
                       Glissez la barre pour comparer l’état des lieux avant travaux et le résultat après rénovation.
                     </p>
@@ -288,7 +288,7 @@ export default function ProjectionsPage() {
                 </FadeIn>
                 <FadeIn delay={0.1} key="padel-video">
                   <div className={styles.block}>
-                    <h2 className={styles.subtitle}>Vidéo de présentation — Padel</h2>
+                    <h2 className={styles.subtitle}>Vidéo de présentation - Padel</h2>
                     <div className={styles.videoWrap}>
                       <LazyVideo
                         className={styles.video}
@@ -314,7 +314,7 @@ export default function ProjectionsPage() {
               >
                 <FadeIn key="ecole">
                   <div className={styles.block}>
-                    <h2 className={styles.subtitle}>École Jules Ferry — Avant / Après</h2>
+                    <h2 className={styles.subtitle}>École Jules Ferry - Avant / Après</h2>
                     <p className={styles.intro}>
                       Glissez la barre pour comparer l’état des lieux avant travaux et le résultat après rénovation.
                     </p>
@@ -328,7 +328,7 @@ export default function ProjectionsPage() {
                 </FadeIn>
                 <FadeIn delay={0.1} key="ecole-video">
                   <div className={styles.block}>
-                    <h2 className={styles.subtitle}>Vidéo de présentation — École Jules Ferry</h2>
+                    <h2 className={styles.subtitle}>Vidéo de présentation - École Jules Ferry</h2>
                     <div className={styles.videoWrap}>
                       <LazyVideo
                         className={styles.video}

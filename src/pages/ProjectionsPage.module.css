@@ -158,7 +158,7 @@
   text-decoration: underline;
 }
 
-/* Onglets projections – typographie plus sobre et meilleure mise en avant */
+/* Onglets projections - typographie plus sobre et meilleure mise en avant */
 .tab,
 .tabActive {
   font-family: var(--font-body);

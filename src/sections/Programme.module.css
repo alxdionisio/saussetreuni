@@ -15,10 +15,9 @@
   align-items: flex-start;
   gap: 1rem;
   padding: 1.25rem 1.5rem;
-  background: var(--sand-light);
-  border: 1px solid var(--color-primary-muted);
-  border-left: 4px solid var(--color-primary);
-  border-radius: 12px;
+  background: var(--accent-soft);
+  border: 1px solid var(--accent);
+  border-radius: var(--radius-md);
   max-width: 640px;
 }
 

@@ -39,7 +39,7 @@ export default function Footer() {
               <p className={styles.brandSub}>
                 Liste sans étiquette pour les élections municipales de Sausset-les-Pins 2026.<br/>Menée par Maxime Marchand.
               </p>
-              <p className={styles.address}>10 Av. Adolphe Fouque — 13960 Sausset-les-Pins (local de campagne)</p>
+              <p className={styles.address}>10 Av. Adolphe Fouque - 13960 Sausset-les-Pins (local de campagne)</p>
             </div>
           </div>
 
@@ -62,7 +62,7 @@ export default function Footer() {
               <Link to="/politique-confidentialite">Politique de confidentialité</Link>
             </div>
             <p className={styles.copyright}>
-              Site de campagne électorale — Élections municipales<br/>© Sausset Réuni 2026 — Tous droits réservés.
+              Site de campagne électorale - Élections municipales<br/>© Sausset Réuni 2026 - Tous droits réservés.
             </p>
           </div>
         </div>

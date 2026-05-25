@@ -56,7 +56,7 @@ export default function BoiteAQuestions() {
               method="POST"
               onSubmit={handleSubmit}
             >
-              <input type="hidden" name="_subject" value="Boîte à questions — Sausset Réuni" />
+              <input type="hidden" name="_subject" value="Boîte à questions - Sausset Réuni" />
               <input type="hidden" name="Type de demande" value="Boîte à questions (accueil)" />
               {status === 'success' && (
                 <div className={styles.formFeedback} role="status" aria-live="polite">

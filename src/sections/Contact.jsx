@@ -57,7 +57,7 @@ export default function Contact() {
                 </div>
                 <div className={styles.event}>
                   <span className={styles.eventDate}>6 Mars 2026</span>
-                  <span>Grande réunion publique — Gymnase</span>
+                  <span>Grande réunion publique - Gymnase</span>
                 </div>
                 <div className={styles.event}>
                   <span className={styles.eventDate}>15 Mars 2026</span>
@@ -65,7 +65,7 @@ export default function Contact() {
                 </div>
                 <div className={styles.event}>
                   <span className={styles.eventDate}>19 Mars 2026</span>
-                  <span>Réunion publique à 18h30 — Gymnase A. Calmat</span>
+                  <span>Réunion publique à 18h30 - Gymnase A. Calmat</span>
                 </div>
               </div>
 

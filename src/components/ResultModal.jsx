@@ -55,7 +55,7 @@ export default function ResultModal() {
 
         <h2 id="result-modal-title" className={styles.title}>Merci à tous</h2>
         <div className={styles.contentPanel}>
-          <p className={styles.kicker}>Résultat officiel — second tour</p>
+          <p className={styles.kicker}>Résultat officiel - second tour</p>
           <p className={styles.score}>
             Maxime Marchand et la liste Sausset Réuni ont recueilli <strong>49,68%</strong> des suffrages exprimés.
           </p>

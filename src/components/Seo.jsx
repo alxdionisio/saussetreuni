@@ -31,7 +31,7 @@ export default function Seo() {
       <meta property="og:locale" content="fr_FR" />
       <meta property="og:site_name" content={SITE_NAME} />
       <meta property="og:image" content={OG_IMAGE} />
-      <meta property="og:image:alt" content={`Logo ${SITE_NAME} — Liste élections municipales Sausset-les-Pins 2026`} />
+      <meta property="og:image:alt" content={`Logo ${SITE_NAME} - Liste élections municipales Sausset-les-Pins 2026`} />
 
       {/* Twitter Card */}
       <meta name="twitter:card" content="summary_large_image" />

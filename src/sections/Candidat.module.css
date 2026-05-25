@@ -16,9 +16,10 @@
       45deg,
       transparent,
       transparent 40px,
-      rgba(212, 168, 67, 0.03) 40px,
-      rgba(212, 168, 67, 0.03) 41px
+      var(--color-primary-muted) 40px,
+      var(--color-primary-muted) 41px
     );
+  opacity: 0.4;
   pointer-events: none;
 }
 
@@ -81,15 +82,29 @@
 }
 
 .quote {
+  position: relative;
   font-family: var(--font-display);
-  font-size: clamp(1.1rem, 1.8vw, 1.35rem);
+  font-size: clamp(1.25rem, 2vw, 1.55rem);
   font-style: italic;
   font-weight: 600;
-  color: var(--gray-800);
-  border-left: 3px solid var(--color-primary);
-  padding-left: 1.25rem;
+  color: var(--color-dark);
+  padding-top: 2.25rem;
   margin-bottom: 1.5rem;
-  line-height: 1.5;
+  line-height: 1.45;
+}
+
+/* Guillemet éditorial (remplace le filet latéral) */
+.quote::before {
+  content: '\201C';
+  position: absolute;
+  top: -0.35rem;
+  left: -0.25rem;
+  font-family: var(--font-display);
+  font-size: 4rem;
+  font-style: normal;
+  line-height: 1;
+  color: var(--accent);
+  opacity: 0.55;
 }
 
 .bio {
@@ -131,21 +146,16 @@
   .inner {
     grid-template-columns: 1fr;
   }
+  .imageCol {
+    justify-content: flex-start;
+  }
   .imageWrapper {
-    max-width: 280px;
+    max-width: 300px;
   }
   .textCol {
-    text-align: center;
-  }
-  .textCol h2 {
-    text-align: center;
+    text-align: left;
   }
   .quote {
-    border-left: none;
-    padding-left: 0;
-    text-align: center;
-    border-top: 2px solid var(--color-primary);
-    border-bottom: 2px solid var(--color-primary);
-    padding: 1rem 0;
+    padding-top: 2.25rem;
   }
 }

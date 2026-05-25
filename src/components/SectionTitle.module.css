@@ -1,77 +1,102 @@
 .wrapper {
+  text-align: left;
+  margin-bottom: clamp(2rem, 4vw, 3.25rem);
+  max-width: var(--measure);
+}
+
+/* Variante centrée explicite (bandes pleine largeur uniquement) */
+.center {
   text-align: center;
-  margin-bottom: clamp(2.5rem, 5vw, 4rem);
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .label {
-  display: inline-block;
-  font-family: var(--font-body);
-  font-size: 0.8rem;
-  font-weight: 600;
-  letter-spacing: 0.2em;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-family: var(--font-heading);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
   text-transform: uppercase;
-  color: var(--gold);
-  margin-bottom: 0.75rem;
-  position: relative;
+  color: var(--accent-strong);
+  margin-bottom: 1rem;
 }
 
-.label::before,
-.label::after {
+/* Petit repère plein (remplace les tirets décoratifs) */
+.label::before {
   content: '';
-  display: inline-block;
-  width: 24px;
-  height: 1px;
-  background: var(--gold);
-  vertical-align: middle;
-  margin: 0 12px;
+  width: 1.75rem;
+  height: 2px;
+  background: var(--accent);
+  border-radius: 2px;
+}
+
+.center .label::after {
+  content: '';
+  width: 1.75rem;
+  height: 2px;
+  background: var(--accent);
+  border-radius: 2px;
 }
 
 .title {
   font-family: var(--font-display);
-  font-size: clamp(2rem, 4vw, 3.2rem);
+  font-size: clamp(2rem, 4vw, 3.1rem);
   font-weight: 700;
-  line-height: 1.2;
-  color: var(--blue-deep);
+  line-height: 1.12;
+  letter-spacing: -0.01em;
+  color: var(--color-dark);
 }
 
 .subtitle {
-  font-size: clamp(1rem, 1.5vw, 1.15rem);
-  color: var(--gray-600);
-  max-width: 640px;
-  margin: 1rem auto 0;
-  line-height: 1.7;
+  font-size: clamp(1.02rem, 1.4vw, 1.18rem);
+  color: var(--ink-soft);
+  max-width: var(--measure);
+  margin: 1rem 0 0;
+  line-height: 1.65;
 }
 
-/* Light variant (on dark background) */
+.center .subtitle {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Light variant (sur fond sombre) */
 .light .label {
   color: var(--color-primary-light);
 }
 
 .light .label::before,
-.light .label::after {
+.light .center.light .label::after {
   background: var(--color-primary-light);
 }
 
 .light .title {
-  color: var(--white);
+  color: var(--paper);
 }
 
 .light .subtitle {
-  color: rgba(255, 255, 255, 0.85);
+  color: oklch(95% 0.01 200 / 0.82);
 }
 
 .intro {
   font-size: 1.05rem;
-  line-height: 1.65;
-  max-width: 640px;
-  margin: 1.25rem auto 0;
-  text-align: center;
+  line-height: 1.7;
+  max-width: var(--measure);
+  margin: 1.25rem 0 0;
+}
+
+.center .intro {
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .wrapper:not(.light) .intro {
-  color: var(--gray-600);
+  color: var(--ink-soft);
 }
 
 .light .intro {
-  color: rgba(255, 255, 255, 0.9);
+  color: oklch(96% 0.01 200 / 0.9);
 }

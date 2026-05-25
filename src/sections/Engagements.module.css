@@ -7,7 +7,7 @@
 .bg {
   position: absolute;
   inset: 0;
-  background: linear-gradient(160deg, #063c47 0%, #318a93 50%, #0a4d56 100%);
+  background: linear-gradient(155deg, var(--color-dark) 0%, var(--color-primary) 58%, var(--blue-navy) 100%);
   z-index: 0;
 }
 
@@ -36,27 +36,28 @@
   display: flex;
   flex-direction: column;
   height: 260px;
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: 20px;
-  padding: 2rem;
-  backdrop-filter: blur(8px);
-  transition: background 0.3s, transform 0.2s var(--ease-out);
+  background: oklch(100% 0 0 / 0.04);
+  border: 1px solid oklch(100% 0 0 / 0.12);
+  border-radius: var(--radius-lg);
+  padding: 1.75rem 1.75rem 1.5rem;
+  transition: border-color 0.3s var(--ease-out), transform 0.3s var(--ease-out), background 0.3s var(--ease-out);
 }
 
 .card:hover {
-  background: rgba(255, 255, 255, 0.08);
-  transform: translateY(-2px);
+  background: oklch(100% 0 0 / 0.07);
+  border-color: var(--accent);
+  transform: translateY(-3px);
 }
 
 .number {
   font-family: var(--font-display);
-  font-size: 2rem;
-  font-weight: 800;
-  color: var(--color-primary-light);
-  opacity: 0.6;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--accent);
   line-height: 1;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.85rem;
+  padding-bottom: 0.85rem;
+  border-bottom: 1px solid oklch(100% 0 0 / 0.14);
   display: block;
 }
 

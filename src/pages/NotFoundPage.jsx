@@ -5,7 +5,7 @@ import { useCookieConsent } from '../contexts/CookieConsentContext'
 import Breadcrumb from '../components/Breadcrumb'
 import styles from './NotFoundPage.module.css'
 
-const PAGE_TITLE = 'Page introuvable — Sausset Réuni 2026'
+const PAGE_TITLE = 'Page introuvable - Sausset Réuni 2026'
 const PAGE_DESCRIPTION =
   'Cette page n’existe pas ou a été déplacée. Retournez à l’accueil du site Sausset Réuni 2026 ou contactez-nous.'
 
@@ -35,7 +35,7 @@ export default function NotFoundPage() {
           </p>
           <h1 className={styles.title}>Cette page a pris le large</h1>
           <p className={styles.text}>
-            Le lien que vous avez suivi ne mène nulle part — ou plus.<br/>Pas de panique&nbsp;:
+            Le lien que vous avez suivi ne mène nulle part - ou plus.<br/>Pas de panique&nbsp;:
             vous pouvez retrouver votre chemin en un clic.
           </p>
           <nav className={styles.nav} aria-label="Navigation de secours">

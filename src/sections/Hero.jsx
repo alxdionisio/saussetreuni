@@ -17,8 +17,7 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.3, duration: 0.6 }}
         >
-          <span className={styles.badgeDot} />
-          Élections Municipales — 15 &amp; 22 Mars 2026
+          Élections Municipales - 15 &amp; 22 Mars 2026
         </motion.div>
 
         <motion.h1

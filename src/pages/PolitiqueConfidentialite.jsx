@@ -84,7 +84,7 @@ export default function PolitiqueConfidentialite() {
           </section>
 
           <section className="legal-page__section">
-            <h2 className="legal-page__sectionTitle">Newsletter et groupe WhatsApp — désinscription</h2>
+            <h2 className="legal-page__sectionTitle">Newsletter et groupe WhatsApp - désinscription</h2>
             <p className="legal-page__paragraph">
               Si vous avez accepté de recevoir les actualités de la liste par newsletter et/ou WhatsApp :
             </p>

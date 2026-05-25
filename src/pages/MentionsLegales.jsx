@@ -25,7 +25,7 @@ export default function MentionsLegales() {
               <strong>Directeur de la publication</strong> (responsable de la publication au sens de l'article 6 III-1 de la loi n° 2004-575 du 21 juin 2004 pour la confiance dans l'économie numérique, dite LCEN) : <strong>Maxime Marchand</strong>.
             </p>
             <p className="legal-page__paragraph">
-              <strong>Adresse du siège de la liste (local de campagne) :</strong> 10 avenue Adolphe Fouque — 13960 Sausset-les-Pins.<br />
+              <strong>Adresse du siège de la liste (local de campagne) :</strong> 10 avenue Adolphe Fouque - 13960 Sausset-les-Pins.<br />
               <em className="legal-page__muted">Il s'agit du local de campagne de la liste et non des locaux de la mairie.</em>
             </p>
             <p className="legal-page__paragraph">
@@ -47,7 +47,7 @@ export default function MentionsLegales() {
             </p>
             <p className="legal-page__paragraph">
               <strong>OVH (nom de domaine) :</strong> OVH SAS, Service Clients, 2 Rue Kellermann, 59100 Roubaix<br />
-              <strong>Téléphone :</strong> 1007 (Du lundi au vendredi : 8h00 à 20h00 — Le samedi : 9h00 à 17h00)
+              <strong>Téléphone :</strong> 1007 (Du lundi au vendredi : 8h00 à 20h00 - Le samedi : 9h00 à 17h00)
             </p>
           </section>
 

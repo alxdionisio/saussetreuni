@@ -32,3 +32,10 @@ Thumbs.db
 coverage/
 .jest/
 .eslintcache
+
+# RuFlo (runtime — données, logs, sessions ; on garde config.yaml)
+.claude-flow/data/
+.claude-flow/logs/
+.claude-flow/sessions/
+.swarm/
+.hive-mind/

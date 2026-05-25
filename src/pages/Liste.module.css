@@ -34,7 +34,7 @@
   padding: clamp(2.5rem, 5vw, 4rem) 0 var(--section-padding);
 }
 
-/* Bloc candidat maire — mis en avant par la taille */
+/* Bloc candidat maire - mis en avant par la taille */
 .candidateBlock {
   display: flex;
   flex-direction: column;
