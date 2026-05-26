@@ -159,6 +159,33 @@
   max-width: 320px;
 }
 
+.credit {
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.credit a {
+  color: rgba(255, 255, 255, 0.9);
+  text-decoration: underline;
+  transition: color 0.2s;
+}
+
+.credit a:hover {
+  color: var(--white);
+}
+
+.footerBlockLight .credit {
+  color: var(--gray-600);
+}
+
+.footerBlockLight .credit a {
+  color: var(--color-primary);
+}
+
+.footerBlockLight .credit a:hover {
+  color: var(--color-dark);
+}
+
 @media (max-width: 768px) {
   .inner {
     grid-template-columns: 1fr;

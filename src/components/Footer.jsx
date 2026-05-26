@@ -64,6 +64,9 @@ export default function Footer() {
             <p className={styles.copyright}>
               Site de campagne électorale - Élections municipales<br/>© Sausset Réuni 2026 - Tous droits réservés.
             </p>
+            <p className={styles.credit}>
+              Créé par <a href="https://www.bymodule.io/" target="_blank" rel="noopener noreferrer">Module</a>
+            </p>
           </div>
         </div>
       </div>
